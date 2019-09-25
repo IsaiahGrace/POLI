@@ -8,3 +8,8 @@ These are the branches planned at the moment:
 - control_register
 - NAND_NOR
 - XOR_BUF
+
+## Design Log
+ 1. What have you done recently? (Post interesting plots or schematics or photos)
+ 2. What will you do before the next progress check?
+ 3. What are you unsure about?
