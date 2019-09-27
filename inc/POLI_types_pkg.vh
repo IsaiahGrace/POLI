@@ -12,6 +12,26 @@ package POLI_types_pkg;
    
    // Parameters
    parameter WORD_SIZE = 32;
+   
+   // Address space
+   parameter BASE_ADDR = 32'h00ff0000; // TODO: Get an assigned base address for our peripheral from the chip integration team
+
+   // NAND_NOR register addresses
+   parameter NAND_NOR_CONTROL_ADDR = BASE_ADDR + 8'h00;
+   parameter NAND_NOR_INPUT_ADDR   = BASE_ADDR + 8'h04;
+   parameter NAND_NOR_OUTPUT_ADDR  = BASE_ADDR + 8'h08;
+
+   // XOR_BUF register addresses
+   parameter XOR_BUF_CONTROL_ADDR  = BASE_ADDR + 8'h0C;
+   parameter XOR_BUF_INPUT_ADDR    = BASE_ADDR + 8'h10;
+   parameter XOR_BUF_OUTPUT_ADDR   = BASE_ADDR + 8'h14;
+
+   // CRC register addresses
+   parameter CRC_CONTROL_ADDR      = BASE_ADDR + 8'h18;
+   parameter CRC_STATUS_ADDR       = BASE_ADDR + 8'h1C;
+   parameter CRC_INPUT_ADDR        = BASE_ADDR + 8'h20;
+   parameter CRC_OUTPUT_ADDR       = BASE_ADDR + 8'h24;
+      
      
    // register select type.
    // This enumerates the registers used in the control register module.
