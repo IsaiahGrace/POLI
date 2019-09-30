@@ -1,9 +1,11 @@
 /*
  John Martinuk
+ 
+ This module simulates the behavior of an NAND_NOR cell with driving buffers to power polymorphic gates
  */
 
 module sim_wrapper_NAND_NOR (
-			     input logic  A, B, orient
+			     input logic  A, B, orient,
 			     output logic X
 			     );
    

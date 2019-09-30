@@ -1,5 +1,7 @@
 /*
- John Martinuk
+ John Martinuk & Isaiah Grace
+ 
+ This module simulates the behavior of a single NAND_NOR polymorphic cell
  */
 
 module sim_NAND_NOR (
@@ -7,7 +9,9 @@ module sim_NAND_NOR (
 		     output logic X
 		     );
 
-   assign X = (Vxx & ~Vyy) ? ~(A & B): ~(A | B);
+   assign X = (Vxx & ~Vyy) ? ~(A & B) : ~(A | B);
 
+   assert (Vxx == Vyy) $error("Vxx and Vyy cannot be equal: NAND_NOR");
+   
 endmodule // sim_NAND_NOR
 
