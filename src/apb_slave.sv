@@ -28,7 +28,6 @@ module apb_slave (
    // write_data can be wired to PWDATA all the time, we will only assert the control signals when appropriate
    assign apbif.write_data = apbif.PWDATA;
    
-   
    always_comb
      begin
 	// Default outputs
