@@ -6,8 +6,8 @@
  */
 
 // Includes
-include "POLI_types_pkg.vh"
-include "control_register_if.vh"
+`include "POLI_types_pkg.vh"
+`include "control_register_if.vh"
 
 module control_register (
 			 input logic CLK,

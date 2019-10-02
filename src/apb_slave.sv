@@ -7,8 +7,8 @@
  */
 
 // Inlcude data types and interfaces
-include "POLI_types_pkg.vh"
-include "apb_slave_if.vh"
+`include "POLI_types_pkg.vh"
+`include "apb_slave_if.vh"
 
 module apb_slave (
 		  input CLK,

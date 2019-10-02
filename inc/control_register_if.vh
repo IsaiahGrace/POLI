@@ -14,7 +14,7 @@
  `define CONTROL_REGISTER_IF_VH
 
 // Includes:
-include "POLI_types_pkg.vh"
+ `include "POLI_types_pkg.vh"
 
 interface control_register_if;
 

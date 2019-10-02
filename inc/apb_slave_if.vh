@@ -11,7 +11,7 @@
  `define APB_SLAVE_IF_VH
 
 // includes:
-include "POLI_types_pkg.vh"
+ `include "POLI_types_pkg.vh"
 
 interface apb_slave_if;
    
