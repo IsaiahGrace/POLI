@@ -15,7 +15,6 @@ import POLI_types_pkg::*;
 `timescale 1 ns / 1 ns
 
 module apb_slave_tb;
-
    // clock period
    parameter PERIOD = 20; //TODO: find the clock period of AXT-05 and set appropriately
    
@@ -35,8 +34,18 @@ module apb_slave_tb;
 `ifndef MAPPED
    apb_slave DUT (apbif);
 `else // !`ifndef MAPPED
-   hazard_unit DUT ( // TODO: fill in this section
-		    );
+   apb_slave DUT ( 
+		   ./PWDATA (huif.PWDATA),
+		   ./PADDR (huif.PADDR),
+		   ./PWRITE (huif.PWRITE),
+		   ./PSEL (huif.PSEL),
+		   ./PENABLE (huif.PENABLE),
+		   ./PREADY (huif.PREADY),
+		   ./PRDATA (huif.PRDATA),
+		   ./read_data (huif.read_data),
+		   ./write_data (huif.write_data),
+		   ./register_select (huif.register_select)
+		   );
 `endif // !`ifndef MAPPED
    
 endmodule // apb_slave_tb
@@ -64,6 +73,7 @@ program test
       end
    endtask // reset_DUT
 
+   
 endprogram // test
    
    
