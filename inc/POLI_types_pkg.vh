@@ -17,7 +17,7 @@ package POLI_types_pkg;
    parameter BASE_ADDR = 32'h00ff0000; // TODO: Get an assigned base address for our peripheral from the chip integration team
 
    // NAND_NOR register addresses
-   localparam NOR_CONTROL_ADDR = BASE_ADDR + 8'h00;
+   localparam NAND_NOR_CONTROL_ADDR = BASE_ADDR + 8'h00;
    localparam NAND_NOR_INPUT_ADDR   = BASE_ADDR + 8'h04;
    localparam NAND_NOR_OUTPUT_ADDR  = BASE_ADDR + 8'h08;
 
@@ -35,20 +35,22 @@ package POLI_types_pkg;
      
    // register select type.
    // This enumerates the registers used in the control register module.
-   typedef enum logic {
-		       NAND_NOR_CONTROL,
-		       NAND_NOR_INPUT,
-		       NAND_NOR_OUTPUT,
-		       
-		       XOR_BUF_CONTROL,
-		       XOR_BUF_INPUT,
-		       XOR_BUF_OUTPUT,
-		       
-		       CRC_CONTROL,
-		       CRC_STATUS,
-		       CRC_INPUT,
-		       CRC_OUTPUT
-		       } regsel_t;
+   typedef enum logic [3:0] {
+			     BAD_ADDR,
+			     
+			     NAND_NOR_CONTROL,
+			     NAND_NOR_INPUT,
+			     NAND_NOR_OUTPUT,
+   
+			     XOR_BUF_CONTROL,
+			     XOR_BUF_INPUT,
+			     XOR_BUF_OUTPUT,
+   
+			     CRC_CONTROL,
+			     CRC_STATUS,
+			     CRC_INPUT,
+			     CRC_OUTPUT
+			     } regsel_t;
    
 endpackage // POLI_types_pkg
    
