@@ -20,7 +20,8 @@ module apb_slave (
 
    // Local signals and registers
    logic [WORD_SIZE-1:0] data_buff;
-   logic [WORD_SIZE-1:0] nxt_data_buff;
+   logic 		 nxt_PREADY;
+   
    
    // PRDATA can always be the data in the output buffer, It doesn't matter if it's garbage when PSEL is LOW
    assign apbif.PRDATA = data_buff;
@@ -34,14 +35,9 @@ module apb_slave (
 
    // write_enable to the control_register should only be high is the Access phase of a write transfer
    assign apbif.write_enable = apbif.PREADY & apbif.PWRITE;
-   
+
    always_comb
      begin
-	// Default outputs
-
-	// Data buff logic
-	nxt_data_buff = apbif.read_data;
-	
 	// Register select logic
 	// Maps the APB bus addresses to the regsel_t type to pass on to control register
 	casez (apbif.PADDR)
@@ -72,7 +68,7 @@ module apb_slave (
 	  end
 	else
 	  begin
-	     data_buff <= nxt_data_buff;
+	     data_buff <= apbif.read_data;
 	     apbif.PREADY <= nxt_PREADY;
 	  end
      end // always_ff @ (posedge CLK, negedge nRST)
