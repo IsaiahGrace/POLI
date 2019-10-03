@@ -152,12 +152,12 @@ program test
 	 // Calculate access expected outputs
 	 exp_write_data = PWDATA;
 	 exp_write_enable = PSEL; // We will only write if PSEL is high
-	 exp_PREADY = 1'b1;
+	 exp_PREADY = PSEL;
 	 exp_register_select = calculate_rs(PADDR);
 	 
 	 // Check apb_slave outputs during Access
 	 assert (apbif.write_data == exp_write_data)
-	   else $error("write_data != %d during: %s", exp_write_data, test_name);
+	   else $error("write_data != %h during: %s", exp_write_data, test_name);
 	 assert (apbif.write_enable == exp_write_enable)
 	   else $error("write_enable != %d during: %s", exp_write_enable, test_name);
 	 assert (apbif.PREADY == exp_PREADY)
@@ -180,6 +180,8 @@ program test
 	 logic 		       exp_write_enable;
 	 regsel_t              exp_register_select;
 
+	 assign apbif.read_data = apbif.register_select == calculate_rs(PADDR) ? read_data : 32'hbad1bad1;
+	 
 	 @(posedge CLK);
 	 #(0.5)
 	 // Setup phase of transfer
@@ -207,26 +209,30 @@ program test
 	 apbif.PWRITE = 1'b0;
 	 apbif.PSEL = PSEL;
 	 apbif.PENABLE = 1'b1;
-	 apbif.read_data = read_data;
+	 //apbif.read_data = read_data;
 	 transfer_phase = PSEL ? "Access" : "NO SEL";
-	 
+
 	 @(negedge CLK);
 	 // Calculate access expected outputs
 	 exp_write_enable = 1'b0; // write_enable should never be high, we are reading
-	 exp_PREADY = 1'b1;
+	 exp_PREADY = PSEL;
 	 exp_register_select = calculate_rs(PADDR);
 	 
 	 // Check apb_slave outputs during Access
 	 assert (apbif.PREADY == exp_PREADY)
 	   else $error("PREADY != %d during: %s", exp_PREADY, test_name);
 	 assert (apbif.PRDATA == read_data)
-
-	 assert (apbif.write_data == exp_write_data)
-	   else $error("write_data != %d during: %s", exp_write_data, test_name);
+	   else $error("PRDATA != %h during: %s", read_data, test_name);
 	 assert (apbif.write_enable == exp_write_enable)
 	   else $error("write_enable != %d during: %s", exp_write_enable, test_name);
 	 assert (apbif.register_select == exp_register_select)
 	   else $error("register_select != %d during: $s", int'(exp_register_select), test_name);
+	 
+	 //@(posedge CLK);
+	 // Turn off select signals to apb_slave
+	 //apbif.PSEL = 1'b0;
+	 //apbif.PENABLE = 1'b0;
+	 
       end
    endtask // apb_read_transfer
 
@@ -237,6 +243,20 @@ program test
 	test_case = 0;
 	test_name = "RESET";
 	reset_DUT();
+
+	// Test case: Fake write and fake read
+	test_case++;
+	test_name = "Fake write and read";
+	apb_write_transfer (
+			    .\PWDATA (32'h1),
+			    .\PADDR (NAND_NOR_CONTROL_ADDR),
+			    .\PSEL (1'b0)
+			    );
+	apb_read_transfer (
+			   .\read_data (32'h2),
+			   .\PADDR (NAND_NOR_INPUT_ADDR),
+			   .\PSEL (1'b0)
+			   );
 	
 	// Test case: write to NAND_NOR regs
 	test_case++;
@@ -306,6 +326,73 @@ program test
 			    .\PSEL (1'b1)
 			    );
 	
+	// Test case: read to NAND_NOR regs
+	test_case++;
+	test_name = "read to NAND_NOR regs";
+	apb_read_transfer (
+			    .\read_data (32'h1),
+			    .\PADDR (NAND_NOR_CONTROL_ADDR),
+			    .\PSEL (1'b1)
+			    );
+	apb_read_transfer (
+			    .\read_data (32'h2),
+			    .\PADDR (NAND_NOR_INPUT_ADDR),
+			    .\PSEL (1'b1)
+			    );
+	// NOTE: This is an error, the control register will NOT update the NAND_NOR_OUTPUT value
+	// However we don't use PSLVERR signal, we just don't do anything...
+	apb_read_transfer (
+			    .\read_data (32'h3),
+			    .\PADDR (NAND_NOR_OUTPUT_ADDR),
+			    .\PSEL (1'b1)
+			    );
+
+	// Test case: read to XOR_BUF regs
+	test_case++;
+	test_name = "read to XOR_BUF regs";
+	apb_read_transfer (
+			    .\read_data (32'haa55aa55),
+			    .\PADDR (XOR_BUF_CONTROL_ADDR),
+			    .\PSEL (1'b1)
+			    );
+	apb_read_transfer (
+			    .\read_data (32'h55aa55aa),
+			    .\PADDR (XOR_BUF_INPUT_ADDR),
+			    .\PSEL (1'b1)
+			    );
+	// NOTE: This is an error, the control register will NOT update the XOR_BUF_OUTPUT value
+	// However we don't use PSLVERR signal, we just don't do anything...
+	apb_read_transfer (
+			    .\read_data (32'hbadbeef),
+			    .\PADDR (XOR_BUF_OUTPUT_ADDR),
+			    .\PSEL (1'b1)
+			    );
+
+	// Test case: read to CRC regs
+	test_case++;
+	test_name = "read to CRC regs";
+	apb_read_transfer (
+			    .\read_data (32'h1),
+			    .\PADDR (CRC_CONTROL_ADDR),
+			    .\PSEL (1'b1)
+			    );
+	apb_read_transfer (
+			    .\read_data (32'h2),
+			    .\PADDR (CRC_STATUS_ADDR),
+			    .\PSEL (1'b1)
+			    );
+	apb_read_transfer (
+			    .\read_data (32'h3),
+			    .\PADDR (CRC_INPUT_ADDR),
+			    .\PSEL (1'b1)
+			    );
+	// NOTE: This is an error, the control register will NOT update the CRC_OUTPUT value
+	// However we don't use PSLVERR signal, we just don't do anything...
+	apb_read_transfer (
+			    .\read_data (32'h5),
+			    .\PADDR (CRC_OUTPUT_ADDR),
+			    .\PSEL (1'b1)
+			    );
 	
 	// Just wait a few cycles before ending the simulation...
 	@(posedge CLK);
