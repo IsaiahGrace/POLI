@@ -1,0 +1,77 @@
+* File: dig_poly_NAND_NOR2_x1.pex.netlist
+* Created: Thu Oct  3 15:21:41 2019
+* Program "Calibre xRC"
+* Version "v2017.2_28.22"
+* 
+.include "dig_poly_NAND_NOR2_x1.pex.netlist.pex"
+.subckt dig_poly_NAND_NOR2_x1  A B X vss! vdd! orient wafer!
+* 
+* 15	wafer!
+* orient	orient
+* vdd!	vdd!
+* vss!	vss!
+* X	X
+* B	B
+* A	A
+MXI28.MM23 N_net06_XI28.MM23_d N_net020_XI28.MM23_g N_XI28.net33_XI28.MM23_s
++ wafer! nsoi1 L=9e-08 W=2e-07 AD=8.95e-14 AS=8.95e-14 PD=1.07e-06 PS=1.07e-06
+MXI28.MM2 N_XI28.net33_XI28.MM2_d N_A_XI28.MM2_g N_XI28.net32_XI28.MM2_s wafer!
++ nsoi1 L=9e-08 W=2e-07 AD=8.95e-14 AS=8.95e-14 PD=1.07e-06 PS=1.07e-06
+MXI28.MM3 N_XI28.net32_XI28.MM3_d N_B_XI28.MM3_g N_X_XI28.MM3_s wafer! nsoi1
++ L=9e-08 W=2e-07 AD=8.95e-14 AS=8.95e-14 PD=1.07e-06 PS=1.07e-06
+MXI28.MM21 N_XI28.net011_XI28.MM21_d N_B_XI28.MM3_g N_X_XI28.MM21_s wafer! nsoi1
++ L=9e-08 W=2e-07 AD=8.95e-14 AS=8.95e-14 PD=1.07e-06 PS=1.07e-06
+MXI28.MM22 N_XI28.net011_XI28.MM22_d N_A_XI28.MM2_g N_X_XI28.MM22_s wafer! nsoi1
++ L=9e-08 W=2e-07 AD=8.95e-14 AS=8.95e-14 PD=1.07e-06 PS=1.07e-06
+MXI28.MM25 N_net020_XI28.MM25_d N_net06_XI28.MM25_g N_XI28.net011_XI28.MM25_s
++ wafer! nsoi1 L=9e-08 W=2e-07 AD=8.95e-14 AS=8.95e-14 PD=1.07e-06 PS=1.07e-06
+MXI28.MM19 N_net020_XI28.MM19_d N_net06_XI28.MM19_g N_XI28.net5_XI28.MM19_s
++ wafer! psoi1 L=9e-08 W=2e-07 AD=8.95e-14 AS=8.95e-14 PD=1.07e-06 PS=1.07e-06
+MXI28.MM1 N_XI28.net5_XI28.MM1_d N_B_XI28.MM3_g N_X_XI28.MM1_s wafer! psoi1
++ L=9e-08 W=2e-07 AD=8.95e-14 AS=8.95e-14 PD=1.07e-06 PS=1.07e-06
+MXI28.MM0 N_XI28.net5_XI28.MM0_d N_A_XI28.MM2_g N_X_XI28.MM0_s wafer! psoi1
++ L=9e-08 W=2e-07 AD=8.95e-14 AS=8.95e-14 PD=1.07e-06 PS=1.07e-06
+MXI28.MM27 N_XI28.net08_XI28.MM27_d N_B_XI28.MM3_g N_X_XI28.MM27_s wafer! psoi1
++ L=9e-08 W=2e-07 AD=8.95e-14 AS=8.95e-14 PD=1.07e-06 PS=1.07e-06
+MXI28.MM24 N_net06_XI28.MM24_d N_net020_XI28.MM24_g N_XI28.net031_XI28.MM24_s
++ wafer! psoi1 L=9e-08 W=2e-07 AD=8.95e-14 AS=8.95e-14 PD=1.07e-06 PS=1.07e-06
+MXI28.MM26 N_XI28.net031_XI28.MM26_d N_A_XI28.MM2_g N_XI28.net08_XI28.MM26_s
++ wafer! psoi1 L=9e-08 W=2e-07 AD=8.95e-14 AS=8.95e-14 PD=1.07e-06 PS=1.07e-06
+MXI29.MM0 N_vss!_XI29.MM0_d N_orient_XI29.MM0_g N_net06_XI29.MM0_s wafer! nsoi1
++ L=9e-08 W=5.9e-07 AD=1.909e-13 AS=2.263e-13 PD=1.85e-06 PS=1.97e-06
+MXI29.MM0@4 N_vss!_XI29.MM0@4_d N_orient_XI29.MM0_g N_net06_XI29.MM0_s wafer!
++ nsoi1 L=9e-08 W=5.9e-07 AD=2.263e-13 AS=2.263e-13 PD=1.97e-06 PS=1.97e-06
+MXI29.MM0@3 N_vss!_XI29.MM0@4_d N_orient_XI29.MM0_g N_net06_XI29.MM0@3_s wafer!
++ nsoi1 L=9e-08 W=5.9e-07 AD=2.263e-13 AS=2.263e-13 PD=1.97e-06 PS=1.97e-06
+MXI29.MM0@2 N_vss!_XI29.MM0@2_d N_orient_XI29.MM0_g N_net06_XI29.MM0@3_s wafer!
++ nsoi1 L=9e-08 W=5.9e-07 AD=1.909e-13 AS=2.263e-13 PD=1.85e-06 PS=1.97e-06
+MXI29.MM2 N_vdd!_XI29.MM2_d N_orient_XI29.MM0_g N_net06_XI29.MM2_s wafer! psoi1
++ L=9e-08 W=9.5e-07 AD=2.845e-13 AS=3.415e-13 PD=2.57e-06 PS=2.69e-06
+MXI29.MM2@4 N_vdd!_XI29.MM2@4_d N_orient_XI29.MM0_g N_net06_XI29.MM2_s wafer!
++ psoi1 L=9e-08 W=9.5e-07 AD=3.415e-13 AS=3.415e-13 PD=2.69e-06 PS=2.69e-06
+MXI29.MM2@3 N_vdd!_XI29.MM2@4_d N_orient_XI29.MM0_g N_net06_XI29.MM2@3_s wafer!
++ psoi1 L=9e-08 W=9.5e-07 AD=3.415e-13 AS=3.415e-13 PD=2.69e-06 PS=2.69e-06
+MXI29.MM2@2 N_vdd!_XI29.MM2@2_d N_orient_XI29.MM0_g N_net06_XI29.MM2@3_s wafer!
++ psoi1 L=9e-08 W=9.5e-07 AD=2.845e-13 AS=3.415e-13 PD=2.57e-06 PS=2.69e-06
+MXI30.MM0 N_vss!_XI30.MM0_d N_net06_XI30.MM0_g N_net020_XI30.MM0_s wafer! nsoi1
++ L=9e-08 W=5.9e-07 AD=1.909e-13 AS=2.263e-13 PD=1.85e-06 PS=1.97e-06
+MXI30.MM0@4 N_vss!_XI30.MM0@4_d N_net06_XI30.MM0_g N_net020_XI30.MM0_s wafer!
++ nsoi1 L=9e-08 W=5.9e-07 AD=2.263e-13 AS=2.263e-13 PD=1.97e-06 PS=1.97e-06
+MXI30.MM0@3 N_vss!_XI30.MM0@4_d N_net06_XI30.MM0_g N_net020_XI30.MM0@3_s wafer!
++ nsoi1 L=9e-08 W=5.9e-07 AD=2.263e-13 AS=2.263e-13 PD=1.97e-06 PS=1.97e-06
+MXI30.MM0@2 N_vss!_XI30.MM0@2_d N_net06_XI30.MM0_g N_net020_XI30.MM0@3_s wafer!
++ nsoi1 L=9e-08 W=5.9e-07 AD=1.909e-13 AS=2.263e-13 PD=1.85e-06 PS=1.97e-06
+MXI30.MM2 N_vdd!_XI30.MM2_d N_net06_XI30.MM0_g N_net020_XI30.MM2_s wafer! psoi1
++ L=9e-08 W=9.5e-07 AD=2.845e-13 AS=3.415e-13 PD=2.57e-06 PS=2.69e-06
+MXI30.MM2@4 N_vdd!_XI30.MM2@4_d N_net06_XI30.MM0_g N_net020_XI30.MM2_s wafer!
++ psoi1 L=9e-08 W=9.5e-07 AD=3.415e-13 AS=3.415e-13 PD=2.69e-06 PS=2.69e-06
+MXI30.MM2@3 N_vdd!_XI30.MM2@4_d N_net06_XI30.MM0_g N_net020_XI30.MM2@3_s wafer!
++ psoi1 L=9e-08 W=9.5e-07 AD=3.415e-13 AS=3.415e-13 PD=2.69e-06 PS=2.69e-06
+MXI30.MM2@2 N_vdd!_XI30.MM2@2_d N_net06_XI30.MM0_g N_net020_XI30.MM2@3_s wafer!
++ psoi1 L=9e-08 W=9.5e-07 AD=2.845e-13 AS=3.415e-13 PD=2.57e-06 PS=2.69e-06
+*
+.include "dig_poly_NAND_NOR2_x1.pex.netlist.dig_poly_NAND_NOR2_x1.pxi"
+*
+.ends
+*
+*
