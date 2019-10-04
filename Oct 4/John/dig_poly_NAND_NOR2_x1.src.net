@@ -1,0 +1,70 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  Polymorphic
+* Top Cell Name: dig_poly_NAND_NOR2_x1
+* View Name:     schematic
+* Netlisted on:  Oct  4 12:31:49 2019
+************************************************************************
+
+.INCLUDE  $PDK_DIR/MITLL090nm/subcircuit.cdl
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+*.GLOBAL vss!
++        vdd!
++        wafer!
+
+*.PIN vss!
+*+    vdd!
+*+    wafer!
+
+************************************************************************
+* Library Name: Polymorphic
+* Cell Name:    polymorphic_NAND_NOR2_x1
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT polymorphic_NAND_NOR2_x1 A B Vxx Vyy X inh_wafer
+*.PININFO A:I B:I Vxx:I Vyy:I X:O inh_wafer:B
+MM19 Vxx Vyy net5 inh_wafer psoi1 m=1 l=90n w=200n nf=1
+MM24 Vyy Vxx net031 inh_wafer psoi1 m=1 l=90n w=200n nf=1
+MM26 net031 A net08 inh_wafer psoi1 m=1 l=90n w=200n nf=1
+MM27 net08 B X inh_wafer psoi1 m=1 l=90n w=200n nf=1
+MM1 net5 B X inh_wafer psoi1 m=1 l=90n w=200n nf=1
+MM0 net5 A X inh_wafer psoi1 m=1 l=90n w=200n nf=1
+MM23 Vyy Vxx net33 inh_wafer nsoi1 m=1 l=90n w=200n nf=1
+MM25 Vxx Vyy net011 inh_wafer nsoi1 m=1 l=90n w=200n nf=1
+MM22 net011 A X inh_wafer nsoi1 m=1 l=90n w=200n nf=1
+MM21 net011 B X inh_wafer nsoi1 m=1 l=90n w=200n nf=1
+MM3 net33 B net32 inh_wafer nsoi1 m=1 l=90n w=200n nf=1
+MM2 net32 A X inh_wafer nsoi1 m=1 l=90n w=200n nf=1
+.ENDS
+
+************************************************************************
+* Library Name: MITLL90_STDLIB_8T
+* Cell Name:    inv_4x
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT inv_4x A X inh_vdd inh_vss inh_wafer
+*.PININFO A:I X:O inh_vdd:B inh_vss:B inh_wafer:B
+MM2 inh_vdd A X inh_wafer psoi1 m=1 l=90n w=3.8u nf=4
+MM0 inh_vss A X inh_wafer nsoi1 m=1 l=90n w=2.36u nf=4
+.ENDS
+
+************************************************************************
+* Library Name: Polymorphic
+* Cell Name:    dig_poly_NAND_NOR2_x1
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT dig_poly_NAND_NOR2_x1 A B X orient
+*.PININFO A:I B:I orient:I X:O
+XI28 A B net020 net06 X wafer! / polymorphic_NAND_NOR2_x1
+XI29 orient net06 vdd! vss! wafer! / inv_4x
+XI30 net06 net020 vdd! vss! wafer! / inv_4x
+.ENDS
+
