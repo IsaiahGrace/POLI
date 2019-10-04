@@ -1,0 +1,246 @@
+
+
+
+                  ##################################################
+                  ##                                              ##
+                  ##         C A L I B R E    S Y S T E M         ##
+                  ##                                              ##
+                  ##             L V S   R E P O R T              ##
+                  ##                                              ##
+                  ##################################################
+
+
+
+REPORT FILE NAME:         dig_poly_NAND_NOR2_x1.lvs.report
+LAYOUT NAME:              /local/scratch/a/socet30/mitll90_june2018_all_socet30/LVS_poly/dig_poly_NAND_NOR2_x1.sp ('dig_poly_NAND_NOR2_x1')
+SOURCE NAME:              /local/scratch/a/socet30/mitll90_june2018_all_socet30/LVS_poly/dig_poly_NAND_NOR2_x1.src.net ('dig_poly_NAND_NOR2_x1')
+RULE FILE:                /local/scratch/a/socet30/mitll90_june2018_all_socet30/LVS_poly/_soi90nm_lvs_top.rules_
+CREATION TIME:            Fri Oct  4 12:31:51 2019
+CURRENT DIRECTORY:        /local/scratch/a/socet30/mitll90_june2018_all_socet30/LVS_poly
+USER NAME:                socet30
+CALIBRE VERSION:          v2017.2_28.22    Tue Jun 6 14:38:29 PDT 2017
+
+
+
+                               OVERALL COMPARISON RESULTS
+
+
+
+                         #       ###################       _   _   
+                        #        #                 #       *   *   
+                   #   #         #     CORRECT     #         |     
+                    # #          #                 #       \___/  
+                     #           ###################               
+
+
+
+
+**************************************************************************************************************
+                                      CELL  SUMMARY
+**************************************************************************************************************
+
+  Result         Layout                        Source
+  -----------    -----------                   --------------
+  CORRECT        dig_poly_NAND_NOR2_x1         dig_poly_NAND_NOR2_x1
+
+
+
+**************************************************************************************************************
+                                      LVS PARAMETERS
+**************************************************************************************************************
+
+
+o LVS Setup:
+
+   // LVS COMPONENT TYPE PROPERTY
+   // LVS COMPONENT SUBTYPE PROPERTY
+   // LVS PIN NAME PROPERTY
+   // LVS POWER NAME
+   // LVS GROUND NAME
+   LVS CELL SUPPLY                        NO
+   LVS RECOGNIZE GATES                    ALL
+   LVS IGNORE PORTS                       NO
+   LVS CHECK PORT NAMES                   NO
+   LVS IGNORE TRIVIAL NAMED PORTS         NO
+   LVS BUILTIN DEVICE PIN SWAP            YES
+   LVS ALL CAPACITOR PINS SWAPPABLE       NO
+   LVS DISCARD PINS BY DEVICE             NO
+   LVS SOFT SUBSTRATE PINS                NO
+   LVS INJECT LOGIC                       YES
+   LVS EXPAND UNBALANCED CELLS            YES
+   LVS FLATTEN INSIDE CELL                NO
+   LVS EXPAND SEED PROMOTIONS             NO
+   LVS PRESERVE PARAMETERIZED CELLS       NO
+   LVS GLOBALS ARE PORTS                  YES
+   LVS REVERSE WL                         NO
+   LVS SPICE PREFER PINS                  NO
+   LVS SPICE SLASH IS SPACE               YES
+   LVS SPICE ALLOW FLOATING PINS          YES
+   // LVS SPICE ALLOW INLINE PARAMETERS     
+   LVS SPICE ALLOW UNQUOTED STRINGS       NO
+   LVS SPICE CONDITIONAL LDD              NO
+   LVS SPICE CULL PRIMITIVE SUBCIRCUITS   NO
+   LVS SPICE IMPLIED MOS AREA             NO
+   // LVS SPICE MULTIPLIER NAME
+   LVS SPICE OVERRIDE GLOBALS             NO
+   LVS SPICE REDEFINE PARAM               NO
+   LVS SPICE REPLICATE DEVICES            NO
+   LVS SPICE SCALE X PARAMETERS           NO
+   LVS SPICE STRICT WL                    NO
+   // LVS SPICE OPTION
+   LVS STRICT SUBTYPES                    YES
+   LVS EXACT SUBTYPES                     YES
+   LAYOUT CASE                            YES
+   SOURCE CASE                            YES
+   LVS COMPARE CASE                       NAMES
+   LVS DOWNCASE DEVICE                    NO
+   LVS REPORT MAXIMUM                     50
+   LVS PROPERTY RESOLUTION MAXIMUM        32
+   // LVS SIGNATURE MAXIMUM
+   // LVS FILTER UNUSED OPTION
+   // LVS REPORT OPTION
+   LVS REPORT UNITS                       YES
+   // LVS NON USER NAME PORT
+   // LVS NON USER NAME NET
+   // LVS NON USER NAME INSTANCE
+   // LVS IGNORE DEVICE PIN
+
+   // Reduction
+
+   LVS REDUCE SERIES MOS                  NO
+   LVS REDUCE PARALLEL MOS                YES
+   LVS REDUCE SEMI SERIES MOS             NO
+   LVS REDUCE SPLIT GATES                 YES
+   LVS REDUCE PARALLEL BIPOLAR            YES
+   LVS REDUCE SERIES CAPACITORS           YES
+   LVS REDUCE PARALLEL CAPACITORS         YES
+   LVS REDUCE SERIES RESISTORS            YES
+   LVS REDUCE PARALLEL RESISTORS          YES
+   LVS REDUCE PARALLEL DIODES             YES
+
+   LVS REDUCE  C(vncap)  PARALLEL NO
+   LVS REDUCE  C(vncap)  SERIES POS NEG NO
+   LVS REDUCTION PRIORITY                 PARALLEL
+   
+   LVS SHORT EQUIVALENT NODES             NO
+
+   // Trace Property
+
+   TRACE PROPERTY  mp  w w 0
+   TRACE PROPERTY  mp  l l 0
+   TRACE PROPERTY  mn  w w 0
+   TRACE PROPERTY  mn  l l 0
+   TRACE PROPERTY  mp5t  w w 0
+   TRACE PROPERTY  mp5t  l l 0
+   TRACE PROPERTY  mn5t  w w 0
+   TRACE PROPERTY  mn5t  l l 0
+   TRACE PROPERTY  d(psd_vtn1_nsd)  a a 1
+   TRACE PROPERTY  d(nsd_vtp1_psd)  a a 1
+   TRACE PROPERTY  d(psd_vtn2_nsd)  a a 1
+   TRACE PROPERTY  d(nsd_vtp2_psd)  a a 1
+   TRACE PROPERTY  d(psd_vtn12_nsd)  a a 1
+   TRACE PROPERTY  d(nsd_vtp12_psd)  a a 1
+   TRACE PROPERTY  r  w w 0
+   TRACE PROPERTY  r  l l 0
+   TRACE PROPERTY  c(vncap)  w w 0
+   TRACE PROPERTY  c(vncap)  l l 0
+   TRACE PROPERTY  c(vncap)  fw fw 0
+   TRACE PROPERTY  c(vncap)  fs fs 0
+   TRACE PROPERTY  c(vncap)  nf nf 0
+   TRACE PROPERTY  c(vncap)  toplev toplev 0
+   TRACE PROPERTY  c(vncap)  botlev botlev 0
+
+
+
+                   CELL COMPARISON RESULTS ( TOP LEVEL )
+
+
+
+                         #       ###################       _   _   
+                        #        #                 #       *   *   
+                   #   #         #     CORRECT     #         |     
+                    # #          #                 #       \___/  
+                     #           ###################               
+
+
+
+LAYOUT CELL NAME:         dig_poly_NAND_NOR2_x1
+SOURCE CELL NAME:         dig_poly_NAND_NOR2_x1
+
+--------------------------------------------------------------------------------------------------------------
+
+INITIAL NUMBERS OF OBJECTS
+--------------------------
+
+                Layout    Source         Component Type
+                ------    ------         --------------
+ Ports:              7         7
+
+ Nets:              15        15
+
+ Instances:         14         8    *    MN (4 pins)
+                    14         8    *    MP (4 pins)
+                ------    ------
+ Total Inst:        28        16
+
+
+NUMBERS OF OBJECTS AFTER TRANSFORMATION
+---------------------------------------
+
+                Layout    Source         Component Type
+                ------    ------         --------------
+ Ports:              7         7
+
+ Nets:               9         9
+
+ Instances:          1         1         SPMN_2_1 (5 pins)
+                     1         1         SPMP_2_1 (5 pins)
+                     2         2         _invb (6 pins)
+                     1         1         _smn3b (6 pins)
+                     1         1         _smp3b (6 pins)
+                ------    ------
+ Total Inst:         6         6
+
+
+       * = Number of objects in layout different from number in source.
+
+
+
+**************************************************************************************************************
+                               INFORMATION AND WARNINGS
+**************************************************************************************************************
+
+
+                  Matched    Matched    Unmatched    Unmatched    Component
+                   Layout     Source       Layout       Source    Type
+                  -------    -------    ---------    ---------    ---------
+   Ports:               7          7            0            0
+
+   Nets:                9          9            0            0
+
+   Instances:           1          1            0            0    SPMN_2_1
+                        1          1            0            0    SPMP_2_1
+                        2          2            0            0    _invb
+                        1          1            0            0    _smn3b
+                        1          1            0            0    _smp3b
+                  -------    -------    ---------    ---------
+   Total Inst:          6          6            0            0
+
+
+o Statistics:
+
+   16 layout mos transistors were reduced to 4.
+     12 mos transistors were deleted by parallel reduction.
+
+
+o Initial Correspondence Points:
+
+   Ports:        A B X vss! vdd! orient wafer!
+
+
+**************************************************************************************************************
+                                         SUMMARY
+**************************************************************************************************************
+
+Total CPU Time:      0 sec
+Total Elapsed Time:  0 sec
