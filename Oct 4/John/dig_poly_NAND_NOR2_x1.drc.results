@@ -1,0 +1,1850 @@
+dig_poly_NAND_NOR2_x1 1000
+R_01.001_ACT_GRID
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+ACT not on 0.005 um grid
+R_01.01_ACT_WIDTH
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum ACT width = 0.14 um
+R_01.02_ACT_SPC
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum ACT spacing = 0.16 um
+R_01.03_ACT_EXT
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum extension of ACT beyond POLY = 0.2 um
+R_01.04_ACTF_ISOLATION
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Prohibited ACTFILL touching non-fill ACT or POLY
+R_01.05_ACT_AREA
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum ACT area = 0.1 um sq.
+W_01.01_ACT_NOCON
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Warning ACT usually contains CON
+W_01.02_ACTXPP_WARN
+0 0 3 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Warning ACTXPP is considered high risk
+Not subjected to normal post processing
+R_02.001_VTN1_GRID
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+VTN1 not on 0.005 um grid
+R_02.01_VTN1_WIDTH
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum VTN1 width = 0.32
+R_02.02_VTN1_CHAN_ENCL
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum VTN1 surround of associated channel = 0.16
+R_02.03_VTN1_SPC
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum VTN1 spacing = 0.2 um
+R_02.04_VTN1_SPC_CHAN_FIELD
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum spacing of (VTN1 not ACT) to unrelated channel = 0.12 um
+R_02.05_VTN1_SPC_CHAN_ACT
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum spacing of VTN1 to unrelated channel on common ACT = 0.3 um
+R_02.06_VTN1_SBCGATE_ENCL
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum VTN1 surround of associated SBC gate extension = 0.16
+R_02.07_VTN1_IBC_RECT
+0 0 3 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum VTN1 rectangle extending over isolated body contact region = 0.16 um x 0.4
+Usually the body contact region outside the H-gate arm(s)
+R_02.08_VTN1_AREA
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum VTN1 area = 0.18 um sq.
+R_02.09_VTN1_VTP_OVERLAP
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Prohibited VTN1 overlapping (VTP1, VTP2, or VTP3) over gate
+W_02.01_VTN1_PMOS
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Warning VTN1 over PMOS channel, while allowed, may not be well characterized
+R_03.001_VTP1_GRID
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+VTP1 not on 0.005 um grid
+R_03.01_VTP1_WIDTH
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum VTP1 width = 0.32
+R_03.02_VTP1_CHAN_ENCL
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum VTP1 surround of associated channel = 0.16
+R_03.03_VTP1_SPC
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum VTP1 spacing = 0.2 um
+R_03.04_VTP1_SPC_CHAN_FIELD
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum spacing of (VTP1 not ACT) to unrelated channel = 0.12 um
+R_03.05_VTP1_SPC_CHAN_ACT
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum spacing of VTP1 to unrelated channel on common ACT = 0.3 um
+R_03.06_VTP1_SBCGATE_ENCL
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum VTP1 surround of associated SBC gate extension = 0.16
+R_03.07_VTP1_IBC_RECT
+0 0 3 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum VTP1 rectangle extending over isolated body contact region = 0.16 um x 0.4
+Usually the body contact region outside the H-gate arm(s)
+R_03.08_VTP1_AREA
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum VTP1 area = 0.18 um sq.
+R_03.09_VTP1_VTN_OVERLAP
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Prohibited VTP1 overlapping (VTN1, VTN2, or VTN3) over gate
+W_03.01_VTP1_NMOS
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Warning VTP1 over NMOS channel, while allowed, may not be well characterized
+R_04.001_VTN2_GRID
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+VTN2 not on 0.005 um grid
+R_04.01_VTN2_WIDTH
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum VTN2 width = 0.32
+R_04.02_VTN2_CHAN_ENCL
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum VTN2 surround of associated channel = 0.16
+R_04.03_VTN2_SPC
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum VTN2 spacing = 0.2 um
+R_04.04_VTN2_SPC_CHAN_FIELD
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum spacing of (VTN2 not ACT) to unrelated channel = 0.12 um
+R_04.05_VTN2_SPC_CHAN_ACT
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum spacing of VTN2 to unrelated channel on common ACT = 0.3 um
+R_04.06_VTN2_SBCGATE_ENCL
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum VTN2 surround of associated SBC gate extension = 0.16
+R_04.07_VTN2_IBC_RECT
+0 0 3 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum VTN2 rectangle extending over isolated body contact region = 0.16 um x 0.4
+Usually the body contact region outside the H-gate arm(s)
+R_04.08_VTN2_AREA
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum VTN2 area = 0.18 um sq.
+R_04.09_VTN2_VTP_OVERLAP
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Prohibited VTN2 overlapping (VTP1, VTP2, or VTP3) over gate
+W_04.01_VTN2_PMOS
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Warning VTN2 over PMOS channel, while allowed, may not be well characterized
+R_05.001_VTP2_GRID
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+VTP2 not on 0.005 um grid
+R_05.01_VTP2_WIDTH
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum VTP2 width = 0.32
+R_05.02_VTP2_CHAN_ENCL
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum VTP2 surround of associated channel = 0.16
+R_05.03_VTP2_SPC
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum VTP2 spacing = 0.2 um
+R_05.04_VTP2_SPC_CHAN_FIELD
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum spacing of (VTP2 not ACT) to unrelated channel = 0.12 um
+R_05.05_VTP2_SPC_CHAN_ACT
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum spacing of VTP2 to unrelated channel on common ACT = 0.3 um
+R_05.06_VTP2_SBCGATE_ENCL
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum VTP2 surround of associated SBC gate extension = 0.16
+R_05.07_VTP2_IBC_RECT
+0 0 3 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum VTP2 rectangle extending over isolated body contact region = 0.16 um x 0.4
+Usually the body contact region outside the H-gate arm(s)
+R_05.08_VTP2_AREA
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum VTP2 area = 0.18 um sq.
+R_05.09_VTP2_VTN_OVERLAP
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Prohibited VTP2 overlapping (VTN1, VTN2 or VTN3) over gate
+W_05.01_VTP2_NMOS
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Warning VTP2 over NMOS channel, while allowed, may not be well characterized
+R_06.002_INVALID_VTN3
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+VTN3 is not a valid layer in current environment settings
+R_07.INVALID_NO_VTP3
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+VTP3 is not a valid layer in current environment settings
+R_08.001_CAPP_GRID
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+CAPP not on 0.005 um grid
+R_08.01_CAPP_WIDTH
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum CAPP width = 0.32
+R_08.02_CAPP_SPC
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum CAPP spacing = 0.2 um
+R_08.03_CAPP_SPC_NMOS
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum CAPP spacing to NMOS channel not on common ACT = 0.12 um
+R_08.04_CAPP_SPC_NMOS_ACT
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum CAPP spacing to NMOS channel on common ACT = 0.3 um
+R_09.002_INVALID_CAPN
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+CAPN is not a valid layer in current environment settings
+R_12.001_POLY_GRID
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+POLY not on 0.005 um grid
+R_12.01_POLY_WIDTH
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum POLY width = 0.09 um
+R_12.02_POLY_SPC
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum POLY spacing = 0.19 um
+R_12.04_POLY_SPCACT
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum FIELD_POLY to ACT spacing = 0.09
+R_12.05_POLY_SPC_GATE
+0 0 3 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum space (POLY not ACT) gate extension to gate 0.12 um
+A square metric check (0.12 um) X (0.12 um)
+R_12.06_POLY_EXT
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum extension of POLY beyond ACT = 0.2 um
+R_12.07_POLY_GATE_SDIMP
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Prohibited (ACT and POLY) outside ((NSD or PSD) not NODEG )
+R_12.08_POLYFIL_ISOLATION
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Prohibited POLYFIL touching non fill ACT or POLY
+R_12.10_POLY_AREA
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum POLY area = 0.1 um sq.
+R_12.11_POLY_NOSDIMP
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Prohibited POLY outside (NSD or PSD)
+R_12.12_POLY_CAPP
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum CAPP surround of POLY when used as capacitor top plate = 0.16 um
+W_12.01_POLY_NOCON
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Warning POLY usually contains CON
+R_13.001_FLGCHAN_GRID
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+FLGCHAN not on 0.005 um grid
+R_13.01_FLGCHAN_GATE
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Prohibited FLGCHAN not (POLY and ACT)
+R_13.02_FLGCHAN_MIN_CHAN_WDTH
+0 0 3 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum FLGCHAN channel width = 0.25 um
+only when use in source-side body contacted FETs
+R_13.03_FLGCHAN_MAX_CHAN_WDTH
+0 0 3 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum FLGCHAN channel width = 4 um
+only when use in body contacted FETs
+R_13.04_FLGCHAN_GATE_EXT
+0 0 3 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum gate extension beyond FLGCHAN edge = 0.15 um
+Exception: Annular FET meeting corners
+R_13.05_FLGCHAN_EXT_IMP
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Required abutting NSD-PSD implant inside FLGCHAN gate extension
+R_13.06_FLGCHAN_FORM
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Required: FLGCHAN must be rectangular with 2 opposite edges coincident with POLY and 2 opposite edges inside POLY
+R_15.001_NSD_GRID
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+NSD not on 0.005 um grid
+R_15.01_NSD_WIDTH
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum NSD width = 0.2
+R_15.02_NSD_PSD_GATE
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Prohibited (POLY and ACT) not (NSD or PSD)
+R_15.03_NSD_NCHAN_SUR
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum NSD surround of NMOS channel = 0.21 um, PSD in "body contact regions"
+R_15.04_NSD_ACT_EXT
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum NSD extension beyond ACT = 0.06 um
+R_15.05_NSD_SPC
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum NSD spacing = 0.2
+R_15.06_NSD_PSD_OVERLAP
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Prohibited NSD-PSD overlap inside ACT, POLY, or NOSLC
+R_15.07_NSD_PCHAN_NOACT_SPC
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum spacing of non-body-contact (NSD not ACT) to PMOS channel = 0.21 um
+R_15.08_NSD_PCHAN_ACT_SPC
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum spacing of non-body-contact (NSD and ACT) to PMOS channel = 0.21 um
+R_15.09_NSD_GATE_OVERLAP
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum NSD overlap of (POLY and ACT) = 0.075 um
+R_15.11_NSD_BC_EXT
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum NSD extension beyond body-contact gate when gate extends at least 0.150 um beyond FLGCHAN = 0.21 um
+R_15.12_NSD_WIDTH_NOT_NOSDX
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum (NSD not NOSDX) width = 0.2
+R_15.13_NSD_WIDTH_NOT_NODEG
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum (NSD not NODEG) width = 0.2
+R_15.14_NSD_ACT_SPC
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum spacing of NSD to (ACT not NSD) = 0.1 um
+R_15.15_NSD_PSD_FIELD_POLY_SUR
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum (NSD or PSD) surround of (POLY not ACT) = 0.05 um
+R_15.16_NSD_PSD_ACT
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Prohibited ACT outside (NSD or PSD) 
+R_16.001_PSD_GRID
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+PSD not on 0.005 um grid
+R_16.01_PSD_WIDTH
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum PSD width = 0.2
+R_16.03_PSD_PCHAN_SUR
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum PSD surround of PMOS channel = 0.21 um, NSD in "body contact regions"
+R_16.04_PSD_ACT_EXT
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum PSD extension beyond ACT = 0.06 um
+R_16.05_PSD_SPC
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum PSD spacing = 0.2
+R_16.07_PSD_NCHAN_NOACT_SPC
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum spacing of non-body-contact (PSD not ACT) to NMOS channel = 0.21 um
+R_16.08_PSD_NCHAN_ACT_SPC
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum spacing of non-body-contact (PSD and ACT) to NMOS channel = 0.21 um
+R_16.09_PSD_GATE_OVERLAP
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum PSD overlap of (POLY and ACT) = 0.075 um
+R_16.10_PSD_SUR_POLY_CAP
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum PSD surround of interacting POLY capacitor plate = 0.21 um
+R_16.11_PSD_BC_EXT
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum PSD extension beyond body-contact gate when gate extends at least 0.150 um beyond FLGCHAN = 0.21 um
+R_16.12_PSD_WIDTH_NOT_NOSDX
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum (PSD not NOSDX) width = 0.2
+R_16.13_PSD_WIDTH_NOT_NODEG
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum (PSD not NODEG) width = 0.2
+R_16.14_PSD_ACT_SPC
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum spacing of PSD to (ACT not PSD) = 0.1 um
+R_16.17_PSD_MIN_SPC_NCHAN_BOUNDARY
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+PSD minimum extension to PMOS_CHANNEL_REGION, when PSD region and NMOS_CHANNEL_REGION are in the same ACT =0.4 um
+R_17.001_NOSDX_GRID
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+NOSDX not on 0.005 um grid
+R_17.01_NOSDX_WIDTH
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum NOSDX width = 0.2
+R_17.02_NOSDX_SPC
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum NOSDX spacing = 0.2
+R_17.03_NOSDX_CHAN_SPC
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum NOSDX spacing to non-overlapping channel = 0.21 um
+R_17.04_NOSDX_SDIMP_EXT
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum independent extension of NSD or PSD beyond NOSDX = 0 or 0.2 um
+R_17.05_NOSDX_BC_ABUT
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+When used in body-contact FET, NOSDX should be coincident with the opposite implant (NSD or PSD) forming the body contact and extend from POLY only with this implant
+R_17.06_NOSDX_EXT_ACT_POLY_NOSLC
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum independent NOSDX extension beyond ACT or POLY or NOSLC = 0.1 um
+R_17.07_ACT_POLY_NOSLC_EXT_NOSDX
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum independent (ACT or POLY or NOSLC) extension beyond NOSDX = 0.1 um
+R_18.001_NODEG_GRID
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+NODEG not on 0.005 um grid
+R_18.01_NODEG_WIDTH
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum NODEG width = 0.2
+R_18.02_NODEG_SPC
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum NODEG spacing = 0.2
+R_18.03_NODEG_CHAN_SPC
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum NODEG spacing to non-overlapping channel = 0.21 um
+R_18.04_NODEG_SDIMP_EXT
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum independant extension of NSD or PSD beyond NODEG = 0 or 0.2 um
+R_19.002_INVALID_THKOX
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+THKOX is not a valid layer in current environment settings
+R_20.001_NOSLC_GRID
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+NOSLC not on 0.005 um grid
+R_20.01_NOSLC_WIDTH
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum NOSLC width = 0.14
+R_20.02_NOSLC_SPC
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum NOSLC spacing = 0.16
+R_20.03_NOSLC_ACT_POLY_SPC
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum NOSLC spacing to unrelated ACT or POLY = 0.12 um
+R_20.04_NOSLC_POLY_ONACT_SPC
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum NOSLC to POLY spacing on common ACT = 0.21 um
+R_20.05_NOSLC_ACT_POLY_EXT
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum independent NOSLC extension beyond ACT or POLY = 0.2 um
+R_20.06_NOSLC_CON_SPACE
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum NOSLC spacing TO CON = 0.12 um (interaction not allowed)
+R_20.07_NOSLC_TGSRF_SPACE
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum NOSLC spacing TO TGSRF = 0.12 um (interaction not allowed)
+R_20.08_NOSLC_AREA
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum NOSLC area = 0.1 um sq.
+R_20.09_NOSLC_POLY_OVERLAP
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum NOSLC overlap of interacting POLY = 0.075 um
+R_20.10_NOSLC_POLY_EXT
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum POLY extension beyond NOSLC = 0.12 um
+R_20.1112_NOSLC_MIN_NSD_PSD_OVERLAP
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum independent overlap NOSLC and NSD or PSD 0.1 um
+R_20.13_NOSLC_NSD_PSD_EXT
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum independent NOSLC extension beyond NSD or PSD = 0.1 um
+R_27.001_CON_GRID
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+CON not on 0.005 um grid
+R_27.01_CON_WIDTH
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Only allowed CON width = 0.12 um x 0.12 um (orthogonal square)
+R_27.02_CON_SP
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum CON spacing = 0.14 um
+R_27.03_CON_ACT_SUR
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum ACT surround of (CON not POLY) = 0.04 um
+R_27.04_CON_POLY_SUR
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum POLY surround of CON = 0.01 um
+R_27.05_CON_POLY_SP
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum (CON not POLY) to POLY spacing = 0.1 um
+R_27.06_CON_ACT_SP
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum (CON and POLY) spacing to (ACT not POLY) = 0.08 um
+R_27.07_CON_SDIMP
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum surround of CON by ((NSD or PSD) not NODEG) =  0.08 um
+R_27.08_CON_NOLAND
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Prohibited CON not (ACT or POLY)
+W_27.01_TGSRF_CON_GATE
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Warning (TGSRF or CON) over (POLY and ACT) may reduce reliability
+R_28.001_TGSRF_GRID
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+TGSRF not on 0.005 um grid
+R_28.01_TGSRF_WIDTH
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Only TGSRF width allowed = 0.14 um
+R_28.02_TGSRF_SPC
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum TGSRF spacing = 0.14 UM
+R_28.03_TGSRF_CON_SPC
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum TGSRF spacing to CON = 0.14 um
+R_28.04_TGSRF_POLY_SUR
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum POLY surround of TGSRF = 0.02 um
+R_28.05_TGSRF_SDIMP
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum surround of TGSRF by ((NSD or PSD) not NODEG) = 0.08 um
+R_28.07_TGSRF_CON
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+POLY contacting TGSRF must also contact CON
+R_28.08_TGSRF_AREA
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum TGSRF area = 0.1 um sq.
+R_29.001_M1_GRID
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+M1 not on 0.005 um grid
+R_29.01_M1_WIDTH
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M1 width = 0.14 um
+R_29.02_M1_SPC
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M1 spacing = 0.16 um
+R_29.03_M1_SPC_0p75
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M1 spacing with widths > 0.75 um = 0.2 um
+R_29.04_M1_SPC_3p0
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M1 spacing with widths > 3.0 um = 0.35 um
+R_29.05_M1_SPC_10p0
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M1 spacing with widths > 10.0 um = 1 um
+R_29.06_M1_CON_SUR
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M1 surround of CON = 0.02 um
+R_29.07_M1_CON_SUR_2_SIDES
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M1 surround of CON on at least 2 opposite edges = 0.04 um
+R_29.09_M1_TGSRF
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Prohibited TGSRF not M1
+R_29.10_M1FIL_ISOLATION
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Prohibited M1FIL touching non-fill M1
+R_29.11_M1_AREA
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M1 area = 0.1 um sq.
+R_29.13_M1PIN_NOM1
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Prohibited M1PIN not M1
+R_29.14_M1_EDGE_CON_20nm_left
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M1 perimeter to number of interacting CON shapes within (<=) 0.02um from M1 edge on LEFT = 240 um:1 contact
+R_29.14_M1_EDGE_CON_20nm_right
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M1 perimeter to number of interacting CON shapes within (<=) 0.02um from M1 edge on RIGHT = 240 um:1 contact
+R_29.14_M1_EDGE_CON_20nm_top
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M1 perimeter to number of interacting CON shapes within (<=) 0.02um from M1 edge on TOP = 240 um:1 contact
+R_29.14_M1_EDGE_CON_20nm_bottom
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M1 perimeter to number of interacting CON shapes within (<=) 0.02um from M1 edge on BOTTOM = 240 um:1 contact
+R_29.14_M1_EDGE_CON_40nm_left
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M1 perimeter to number of interacting CON shapes within (<=) 0.04um from M1 edge on LEFT = 240 um:1 contact
+R_29.14_M1_EDGE_CON_40nm_right
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M1 perimeter to number of interacting CON shapes within (<=) 0.04um from M1 edge on RIGHT = 240 um:1 contact
+R_29.14_M1_EDGE_CON_40nm_top
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M1 perimeter to number of interacting CON shapes within (<=) 0.04um from M1 edge on TOP = 240 um:1 contact
+R_29.14_M1_EDGE_CON_40nm_bottom
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M1 perimeter to number of interacting CON shapes within (<=) 0.04um from M1 edge on BOTTOM = 240 um:1 contact
+R_29.14_M1_EDGE_CON_60nm_left
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M1 perimeter to number of interacting CON shapes within (<=) 0.06um from M1 edge on LEFT = 240 um:1 contact
+R_29.14_M1_EDGE_CON_60nm_right
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M1 perimeter to number of interacting CON shapes within (<=) 0.06um from M1 edge on RIGHT = 240 um:1 contact
+R_29.14_M1_EDGE_CON_60nm_top
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M1 perimeter to number of interacting CON shapes within (<=) 0.06um from M1 edge on TOP = 240 um:1 contact
+R_29.14_M1_EDGE_CON_60nm_bottom
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M1 perimeter to number of interacting CON shapes within (<=) 0.06um from M1 edge on BOTTOM = 240 um:1 contact
+R_29.14_M1_EDGE_CON_80nm_left
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M1 perimeter to number of interacting CON shapes within (<=) 0.08um from M1 edge on LEFT = 240 um:1 contact
+R_29.14_M1_EDGE_CON_80nm_right
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M1 perimeter to number of interacting CON shapes within (<=) 0.08um from M1 edge on RIGHT = 240 um:1 contact
+R_29.14_M1_EDGE_CON_80nm_top
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M1 perimeter to number of interacting CON shapes within (<=) 0.08um from M1 edge on TOP = 240 um:1 contact
+R_29.14_M1_EDGE_CON_80nm_bottom
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M1 perimeter to number of interacting CON shapes within (<=) 0.08um from M1 edge on BOTTOM = 240 um:1 contact
+R_29.14_M1_EDGE_CON_100nm_left
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M1 perimeter to number of interacting CON shapes within (<=) 0.10um from M1 edge on LEFT = 240 um:1 contact
+R_29.14_M1_EDGE_CON_100nm_right
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M1 perimeter to number of interacting CON shapes within (<=) 0.10um from M1 edge on RIGHT = 240 um:1 contact
+R_29.14_M1_EDGE_CON_100nm_top
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M1 perimeter to number of interacting CON shapes within (<=) 0.10um from M1 edge on TOP = 240 um:1 contact
+R_29.14_M1_EDGE_CON_100nm_bottom
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M1 perimeter to number of interacting CON shapes within (<=) 0.10um from M1 edge on BOTTOM = 240 um:1 contact
+R_29.14_M1_EDGE_CON_120nm_left
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M1 perimeter to number of interacting CON shapes within (<=) 0.12um from M1 edge on LEFT = 240 um:1 contact
+R_29.14_M1_EDGE_CON_120nm_right
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M1 perimeter to number of interacting CON shapes within (<=) 0.12um from M1 edge on RIGHT = 240 um:1 contact
+R_29.14_M1_EDGE_CON_120nm_top
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M1 perimeter to number of interacting CON shapes within (<=) 0.12um from M1 edge on TOP = 240 um:1 contact
+R_29.14_M1_EDGE_CON_120nm_bottom
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M1 perimeter to number of interacting CON shapes within (<=) 0.12um from M1 edge on BOTTOM = 240 um:1 contact
+R_30.001_V12_GRID
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+V12 not on 0.005 um grid
+R_30.01_V12_WIDTH
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Only allowed V12 width = 0.14 um x 0.14 um (orthogonal square)
+R_30.02_V12_SP
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum V12 spacing = 0.14 um
+R_30.03_V12_M1_SUR
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M1 surround of V12 = 0.02 um
+R_30.04_V12_M1_SUR_2_SIDES
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M1 surround of V12 on at least 2 opposite edges = 0.04 um  
+R_30.06_V12_M1
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Prohibited V12 not M1
+R_31.002_INVALID_OGCM1
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+OGCM1 is not a valid layer in current environment settings
+R_32.001_M2_GRID
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+M2 not on 0.005 um grid
+R_32.01_M2_WIDTH
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M2 width = 0.14 um
+R_32.02_M2_SPC
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M2 spacing = 0.16 um
+R_32.03_M2_SPC_0p75
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M2 spacing with widths > 0.75 um = 0.2 um
+R_32.04_M2_SPC_3p0
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M2 spacing with widths > 3.0 um = 0.35 um
+R_32.05_M2_SPC_10p0
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M2 spacing with widths > 10.0 um = 1 um
+R_32.06_M2_V12_SUR
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M2 surround of V12 = 0.02 um
+R_32.07_M2_V12_SUR_2_SIDES
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M2 surround of V12 on at least 2 opposite edges = 0.04 um
+R_32.09_M2FIL_ISOLATION
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Prohibited M2FIL touching non-fill M2
+R_32.10_M2_AREA
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M2 area = 0.1 um sq.
+R_32.13_M2PIN_NOM2
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Prohibited M2PIN not M2
+R_32.14_M2_EDGE_V12_20nm_left
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M2 perimeter to number of interacting V12 shapes within (<=) 0.02um from M2 edge on LEFT = 240 um:1 contact
+R_32.14_M2_EDGE_V12_20nm_right
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M2 perimeter to number of interacting V12 shapes within (<=) 0.02um from M2 edge on RIGHT = 240 um:1 contact
+R_32.14_M2_EDGE_V12_20nm_top
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M2 perimeter to number of interacting V12 shapes within (<=) 0.02um from M2 edge on TOP = 240 um:1 contact
+R_32.14_M2_EDGE_V12_20nm_bottom
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M2 perimeter to number of interacting V12 shapes within (<=) 0.02um from M2 edge on BOTTOM = 240 um:1 contact
+R_32.14_M2_EDGE_V12_40nm_left
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M2 perimeter to number of interacting V12 shapes within (<=) 0.04um from M2 edge on LEFT = 240 um:1 contact
+R_32.14_M2_EDGE_V12_40nm_right
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M2 perimeter to number of interacting V12 shapes within (<=) 0.04um from M2 edge on RIGHT = 240 um:1 contact
+R_32.14_M2_EDGE_V12_40nm_top
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M2 perimeter to number of interacting V12 shapes within (<=) 0.04um from M2 edge on TOP = 240 um:1 contact
+R_32.14_M2_EDGE_V12_40nm_bottom
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M2 perimeter to number of interacting V12 shapes within (<=) 0.04um from M2 edge on BOTTOM = 240 um:1 contact
+R_32.14_M2_EDGE_V12_60nm_left
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M2 perimeter to number of interacting V12 shapes within (<=) 0.06um from M2 edge on LEFT = 240 um:1 contact
+R_32.14_M2_EDGE_V12_60nm_right
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M2 perimeter to number of interacting V12 shapes within (<=) 0.06um from M2 edge on RIGHT = 240 um:1 contact
+R_32.14_M2_EDGE_V12_60nm_top
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M2 perimeter to number of interacting V12 shapes within (<=) 0.06um from M2 edge on TOP = 240 um:1 contact
+R_32.14_M2_EDGE_V12_60nm_bottom
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M2 perimeter to number of interacting V12 shapes within (<=) 0.06um from M2 edge on BOTTOM = 240 um:1 contact
+R_32.14_M2_EDGE_V12_80nm_left
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M2 perimeter to number of interacting V12 shapes within (<=) 0.08um from M2 edge on LEFT = 240 um:1 contact
+R_32.14_M2_EDGE_V12_80nm_right
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M2 perimeter to number of interacting V12 shapes within (<=) 0.08um from M2 edge on RIGHT = 240 um:1 contact
+R_32.14_M2_EDGE_V12_80nm_top
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M2 perimeter to number of interacting V12 shapes within (<=) 0.08um from M2 edge on TOP = 240 um:1 contact
+R_32.14_M2_EDGE_V12_80nm_bottom
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M2 perimeter to number of interacting V12 shapes within (<=) 0.08um from M2 edge on BOTTOM = 240 um:1 contact
+R_32.14_M2_EDGE_V12_100nm_left
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M2 perimeter to number of interacting V12 shapes within (<=) 0.10um from M2 edge on LEFT = 240 um:1 contact
+R_32.14_M2_EDGE_V12_100nm_right
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M2 perimeter to number of interacting V12 shapes within (<=) 0.10um from M2 edge on RIGHT = 240 um:1 contact
+R_32.14_M2_EDGE_V12_100nm_top
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M2 perimeter to number of interacting V12 shapes within (<=) 0.10um from M2 edge on TOP = 240 um:1 contact
+R_32.14_M2_EDGE_V12_100nm_bottom
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M2 perimeter to number of interacting V12 shapes within (<=) 0.10um from M2 edge on BOTTOM = 240 um:1 contact
+R_32.14_M2_EDGE_V12_120nm_left
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M2 perimeter to number of interacting V12 shapes within (<=) 0.12um from M2 edge on LEFT = 240 um:1 contact
+R_32.14_M2_EDGE_V12_120nm_right
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M2 perimeter to number of interacting V12 shapes within (<=) 0.12um from M2 edge on RIGHT = 240 um:1 contact
+R_32.14_M2_EDGE_V12_120nm_top
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M2 perimeter to number of interacting V12 shapes within (<=) 0.12um from M2 edge on TOP = 240 um:1 contact
+R_32.14_M2_EDGE_V12_120nm_bottom
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M2 perimeter to number of interacting V12 shapes within (<=) 0.12um from M2 edge on BOTTOM = 240 um:1 contact
+R_33.001_V23_GRID
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+V23 not on 0.005 um grid
+R_33.01_V23_WIDTH
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Only allowed V23 width = 0.14 um x 0.14 um (orthogonal square)
+R_33.02_V23_SP
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum V23 spacing = 0.14 um
+R_33.03_V23_M2_SUR
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M2 surround of V23 = 0.02 um
+R_33.04_V23_M2_SUR_2_SIDES
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M2 surround of V23 on at least 2 opposite edges = 0.04 um  
+R_33.06_V23_M2
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Prohibited V23 not M2
+R_34.001_M3_GRID
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+M3 not on 0.005 um grid
+R_34.01_M3_WIDTH
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M3 width = 0.14 um
+R_34.02_M3_SPC
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M3 spacing = 0.16 um
+R_34.03_M3_SPC_0p75
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M3 spacing with widths > 0.75 um = 0.2 um
+R_34.04_M3_SPC_3p0
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M3 spacing with widths > 3.0 um = 0.35 um
+R_34.05_M3_SPC_10p0
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M3 spacing with widths > 10.0 um = 1 um
+R_34.06_M3_V23_SUR
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M3 surround of V23 = 0.02 um
+R_34.07_M3_V23_SUR_2_SIDES
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M3 surround of V23 on at least 2 opposite edges = 0.04 um
+R_34.09_M3FIL_ISOLATION
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Prohibited M3FIL touching non-fill M3
+R_34.10_M3_AREA
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M3 area = 0.1 um sq.
+R_34.13_M3PIN_NOM3
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Prohibited M3PIN not M3
+R_34.14_M3_EDGE_V23_20nm_left
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M3 perimeter to number of interacting V23 shapes within (<=) 0.02um from M3 edge on LEFT = 240 um:1 contact
+R_34.14_M3_EDGE_V23_20nm_right
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M3 perimeter to number of interacting V23 shapes within (<=) 0.02um from M3 edge on RIGHT = 240 um:1 contact
+R_34.14_M3_EDGE_V23_20nm_top
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M3 perimeter to number of interacting V23 shapes within (<=) 0.02um from M3 edge on TOP = 240 um:1 contact
+R_34.14_M3_EDGE_V23_20nm_bottom
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M3 perimeter to number of interacting V23 shapes within (<=) 0.02um from M3 edge on BOTTOM = 240 um:1 contact
+R_34.14_M3_EDGE_V23_40nm_left
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M3 perimeter to number of interacting V23 shapes within (<=) 0.04um from M3 edge on LEFT = 240 um:1 contact
+R_34.14_M3_EDGE_V23_40nm_right
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M3 perimeter to number of interacting V23 shapes within (<=) 0.04um from M3 edge on RIGHT = 240 um:1 contact
+R_34.14_M3_EDGE_V23_40nm_top
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M3 perimeter to number of interacting V23 shapes within (<=) 0.04um from M3 edge on TOP = 240 um:1 contact
+R_34.14_M3_EDGE_V23_40nm_bottom
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M3 perimeter to number of interacting V23 shapes within (<=) 0.04um from M3 edge on BOTTOM = 240 um:1 contact
+R_34.14_M3_EDGE_V23_60nm_left
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M3 perimeter to number of interacting V23 shapes within (<=) 0.06um from M3 edge on LEFT = 240 um:1 contact
+R_34.14_M3_EDGE_V23_60nm_right
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M3 perimeter to number of interacting V23 shapes within (<=) 0.06um from M3 edge on RIGHT = 240 um:1 contact
+R_34.14_M3_EDGE_V23_60nm_top
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M3 perimeter to number of interacting V23 shapes within (<=) 0.06um from M3 edge on TOP = 240 um:1 contact
+R_34.14_M3_EDGE_V23_60nm_bottom
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M3 perimeter to number of interacting V23 shapes within (<=) 0.06um from M3 edge on BOTTOM = 240 um:1 contact
+R_34.14_M3_EDGE_V23_80nm_left
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M3 perimeter to number of interacting V23 shapes within (<=) 0.08um from M3 edge on LEFT = 240 um:1 contact
+R_34.14_M3_EDGE_V23_80nm_right
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M3 perimeter to number of interacting V23 shapes within (<=) 0.08um from M3 edge on RIGHT = 240 um:1 contact
+R_34.14_M3_EDGE_V23_80nm_top
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M3 perimeter to number of interacting V23 shapes within (<=) 0.08um from M3 edge on TOP = 240 um:1 contact
+R_34.14_M3_EDGE_V23_80nm_bottom
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M3 perimeter to number of interacting V23 shapes within (<=) 0.08um from M3 edge on BOTTOM = 240 um:1 contact
+R_34.14_M3_EDGE_V23_100nm_left
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M3 perimeter to number of interacting V23 shapes within (<=) 0.10um from M3 edge on LEFT = 240 um:1 contact
+R_34.14_M3_EDGE_V23_100nm_right
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M3 perimeter to number of interacting V23 shapes within (<=) 0.10um from M3 edge on RIGHT = 240 um:1 contact
+R_34.14_M3_EDGE_V23_100nm_top
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M3 perimeter to number of interacting V23 shapes within (<=) 0.10um from M3 edge on TOP = 240 um:1 contact
+R_34.14_M3_EDGE_V23_100nm_bottom
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M3 perimeter to number of interacting V23 shapes within (<=) 0.10um from M3 edge on BOTTOM = 240 um:1 contact
+R_34.14_M3_EDGE_V23_120nm_left
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M3 perimeter to number of interacting V23 shapes within (<=) 0.12um from M3 edge on LEFT = 240 um:1 contact
+R_34.14_M3_EDGE_V23_120nm_right
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M3 perimeter to number of interacting V23 shapes within (<=) 0.12um from M3 edge on RIGHT = 240 um:1 contact
+R_34.14_M3_EDGE_V23_120nm_top
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M3 perimeter to number of interacting V23 shapes within (<=) 0.12um from M3 edge on TOP = 240 um:1 contact
+R_34.14_M3_EDGE_V23_120nm_bottom
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M3 perimeter to number of interacting V23 shapes within (<=) 0.12um from M3 edge on BOTTOM = 240 um:1 contact
+R_35.001_V34_GRID
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+V34 not on 0.005 um grid
+R_35.01_V34_WIDTH
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Only allowed V34 width = 0.14 um x 0.14 um (orthogonal square)
+R_35.02_V34_SP
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum V34 spacing = 0.14 um
+R_35.03_V34_M3_SUR
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M3 surround of V34 = 0.02 um
+R_35.04_V34_M3_SUR_2_SIDES
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M3 surround of V34 on at least 2 opposite edges = 0.04 um  
+R_35.06_V34_M3
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Prohibited V34 not M3
+R_36.001_M4_GRID
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+M4 not on 0.005 um grid
+R_36.01_M4_WIDTH
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M4 width = 0.14 um
+R_36.02_M4_SPC
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M4 spacing = 0.16 um
+R_36.03_M4_SPC_0p75
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M4 spacing with widths > 0.75 um = 0.2 um
+R_36.04_M4_SPC_3p0
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M4 spacing with widths > 3.0 um = 0.35 um
+R_36.05_M4_SPC_10p0
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M4 spacing with widths > 10.0 um = 1
+R_36.06_M4_V34_SUR
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M4 surround of V34 = 0.02 um
+R_36.07_M4_V34_SUR_2_SIDES
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M4 surround of V34 on at least 2 opposite edges = 0.04 um
+R_36.09_M4FIL_ISOLATION
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Prohibited M4FIL touching non-fill M4
+R_36.10_M4_AREA
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M4 area = 0.1 um sq.
+R_36.13_M4PIN_NOM4
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Prohibited M4PIN not M4
+R_36.14_M4_EDGE_V34_20nm_left
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M4 perimeter to number of interacting V34 shapes within (<=) 0.02um from M4 edge on LEFT = 240 um:1 contact
+R_36.14_M4_EDGE_V34_20nm_right
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M4 perimeter to number of interacting V34 shapes within (<=) 0.02um from M4 edge on RIGHT = 240 um:1 contact
+R_36.14_M4_EDGE_V34_20nm_top
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M4 perimeter to number of interacting V34 shapes within (<=) 0.02um from M4 edge on TOP = 240 um:1 contact
+R_36.14_M4_EDGE_V34_20nm_bottom
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M4 perimeter to number of interacting V34 shapes within (<=) 0.02um from M4 edge on BOTTOM = 240 um:1 contact
+R_36.14_M4_EDGE_V34_40nm_left
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M4 perimeter to number of interacting V34 shapes within (<=) 0.04um from M4 edge on LEFT = 240 um:1 contact
+R_36.14_M4_EDGE_V34_40nm_right
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M4 perimeter to number of interacting V34 shapes within (<=) 0.04um from M4 edge on RIGHT = 240 um:1 contact
+R_36.14_M4_EDGE_V34_40nm_top
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M4 perimeter to number of interacting V34 shapes within (<=) 0.04um from M4 edge on TOP = 240 um:1 contact
+R_36.14_M4_EDGE_V34_40nm_bottom
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M4 perimeter to number of interacting V34 shapes within (<=) 0.04um from M4 edge on BOTTOM = 240 um:1 contact
+R_36.14_M4_EDGE_V34_60nm_left
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M4 perimeter to number of interacting V34 shapes within (<=) 0.06um from M4 edge on LEFT = 240 um:1 contact
+R_36.14_M4_EDGE_V34_60nm_right
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M4 perimeter to number of interacting V34 shapes within (<=) 0.06um from M4 edge on RIGHT = 240 um:1 contact
+R_36.14_M4_EDGE_V34_60nm_top
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M4 perimeter to number of interacting V34 shapes within (<=) 0.06um from M4 edge on TOP = 240 um:1 contact
+R_36.14_M4_EDGE_V34_60nm_bottom
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M4 perimeter to number of interacting V34 shapes within (<=) 0.06um from M4 edge on BOTTOM = 240 um:1 contact
+R_36.14_M4_EDGE_V34_80nm_left
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M4 perimeter to number of interacting V34 shapes within (<=) 0.08um from M4 edge on LEFT = 240 um:1 contact
+R_36.14_M4_EDGE_V34_80nm_right
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M4 perimeter to number of interacting V34 shapes within (<=) 0.08um from M4 edge on RIGHT = 240 um:1 contact
+R_36.14_M4_EDGE_V34_80nm_top
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M4 perimeter to number of interacting V34 shapes within (<=) 0.08um from M4 edge on TOP = 240 um:1 contact
+R_36.14_M4_EDGE_V34_80nm_bottom
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M4 perimeter to number of interacting V34 shapes within (<=) 0.08um from M4 edge on BOTTOM = 240 um:1 contact
+R_36.14_M4_EDGE_V34_100nm_left
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M4 perimeter to number of interacting V34 shapes within (<=) 0.10um from M4 edge on LEFT = 240 um:1 contact
+R_36.14_M4_EDGE_V34_100nm_right
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M4 perimeter to number of interacting V34 shapes within (<=) 0.10um from M4 edge on RIGHT = 240 um:1 contact
+R_36.14_M4_EDGE_V34_100nm_top
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M4 perimeter to number of interacting V34 shapes within (<=) 0.10um from M4 edge on TOP = 240 um:1 contact
+R_36.14_M4_EDGE_V34_100nm_bottom
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M4 perimeter to number of interacting V34 shapes within (<=) 0.10um from M4 edge on BOTTOM = 240 um:1 contact
+R_36.14_M4_EDGE_V34_120nm_left
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M4 perimeter to number of interacting V34 shapes within (<=) 0.12um from M4 edge on LEFT = 240 um:1 contact
+R_36.14_M4_EDGE_V34_120nm_right
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M4 perimeter to number of interacting V34 shapes within (<=) 0.12um from M4 edge on RIGHT = 240 um:1 contact
+R_36.14_M4_EDGE_V34_120nm_top
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M4 perimeter to number of interacting V34 shapes within (<=) 0.12um from M4 edge on TOP = 240 um:1 contact
+R_36.14_M4_EDGE_V34_120nm_bottom
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M4 perimeter to number of interacting V34 shapes within (<=) 0.12um from M4 edge on BOTTOM = 240 um:1 contact
+R_37.001_V45_GRID
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+V45 not on 0.005 um grid
+R_37.01_V45_WIDTH
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Only allowed V45 width = 0.14 um x 0.14 um (orthogonal square)
+R_37.02_V45_SP
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum V45 spacing = 0.14 um
+R_37.03_V45_M4_SUR
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M4 surround of V45 = 0.02 um
+R_37.04_V45_M4_SUR_2_SIDES
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M4 surround of V45 on at least 2 opposite edges = 0.04 um  
+R_37.06_V45_M4
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Prohibited V45 not M4
+R_38.001_M5_GRID
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+M5 not on 0.005 um grid
+R_38.01_M5_WIDTH
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M5 width = 0.14 um
+R_38.02_M5_SPC
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M5 spacing = 0.16 um
+R_38.03_M5_SPC_0p75
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M5 spacing with widths > 0.75 um = 0.2 um
+R_38.04_M5_SPC_3p0
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M5 spacing with widths > 3.0 um = 0.35 um
+R_38.05_M5_SPC_10p0
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M5 spacing with widths > 10.0 um = 1 um
+R_38.06_M5_V45_SUR
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M5 surround of V45 = 0.02 um
+R_38.07_M5_V45_SUR_2_SIDES
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M5 surround of V45 on at least 2 opposite edges = 0.04 um
+R_38.09_M5FIL_ISOLATION
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Prohibited M5FIL touching non-fill M5
+R_38.10_M5_AREA
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M5 area = 0.1 um sq.
+R_38.13_M5PIN_NOM5
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Prohibited M5PIN not M5
+R_38.14_M5_EDGE_V45_20nm_left
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M5 perimeter to number of interacting V45 shapes within (<=) 0.02um from M5 edge on LEFT = 240 um:1 contact
+R_38.14_M5_EDGE_V45_20nm_right
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M5 perimeter to number of interacting V45 shapes within (<=) 0.02um from M5 edge on RIGHT = 240 um:1 contact
+R_38.14_M5_EDGE_V45_20nm_top
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M5 perimeter to number of interacting V45 shapes within (<=) 0.02um from M5 edge on TOP = 240 um:1 contact
+R_38.14_M5_EDGE_V45_20nm_bottom
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M5 perimeter to number of interacting V45 shapes within (<=) 0.02um from M5 edge on BOTTOM = 240 um:1 contact
+R_38.14_M5_EDGE_V45_40nm_left
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M5 perimeter to number of interacting V45 shapes within (<=) 0.04um from M5 edge on LEFT = 240 um:1 contact
+R_38.14_M5_EDGE_V45_40nm_right
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M5 perimeter to number of interacting V45 shapes within (<=) 0.04um from M5 edge on RIGHT = 240 um:1 contact
+R_38.14_M5_EDGE_V45_40nm_top
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M5 perimeter to number of interacting V45 shapes within (<=) 0.04um from M5 edge on TOP = 240 um:1 contact
+R_38.14_M5_EDGE_V45_40nm_bottom
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M5 perimeter to number of interacting V45 shapes within (<=) 0.04um from M5 edge on BOTTOM = 240 um:1 contact
+R_38.14_M5_EDGE_V45_60nm_left
+0 0 2 Oct  4 12:33:39 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M5 perimeter to number of interacting V45 shapes within (<=) 0.06um from M5 edge on LEFT = 240 um:1 contact
+R_38.14_M5_EDGE_V45_60nm_right
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M5 perimeter to number of interacting V45 shapes within (<=) 0.06um from M5 edge on RIGHT = 240 um:1 contact
+R_38.14_M5_EDGE_V45_60nm_top
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M5 perimeter to number of interacting V45 shapes within (<=) 0.06um from M5 edge on TOP = 240 um:1 contact
+R_38.14_M5_EDGE_V45_60nm_bottom
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M5 perimeter to number of interacting V45 shapes within (<=) 0.06um from M5 edge on BOTTOM = 240 um:1 contact
+R_38.14_M5_EDGE_V45_80nm_left
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M5 perimeter to number of interacting V45 shapes within (<=) 0.08um from M5 edge on LEFT = 240 um:1 contact
+R_38.14_M5_EDGE_V45_80nm_right
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M5 perimeter to number of interacting V45 shapes within (<=) 0.08um from M5 edge on RIGHT = 240 um:1 contact
+R_38.14_M5_EDGE_V45_80nm_top
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M5 perimeter to number of interacting V45 shapes within (<=) 0.08um from M5 edge on TOP = 240 um:1 contact
+R_38.14_M5_EDGE_V45_80nm_bottom
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M5 perimeter to number of interacting V45 shapes within (<=) 0.08um from M5 edge on BOTTOM = 240 um:1 contact
+R_38.14_M5_EDGE_V45_100nm_left
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M5 perimeter to number of interacting V45 shapes within (<=) 0.10um from M5 edge on LEFT = 240 um:1 contact
+R_38.14_M5_EDGE_V45_100nm_right
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M5 perimeter to number of interacting V45 shapes within (<=) 0.10um from M5 edge on RIGHT = 240 um:1 contact
+R_38.14_M5_EDGE_V45_100nm_top
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M5 perimeter to number of interacting V45 shapes within (<=) 0.10um from M5 edge on TOP = 240 um:1 contact
+R_38.14_M5_EDGE_V45_100nm_bottom
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M5 perimeter to number of interacting V45 shapes within (<=) 0.10um from M5 edge on BOTTOM = 240 um:1 contact
+R_38.14_M5_EDGE_V45_120nm_left
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M5 perimeter to number of interacting V45 shapes within (<=) 0.12um from M5 edge on LEFT = 240 um:1 contact
+R_38.14_M5_EDGE_V45_120nm_right
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M5 perimeter to number of interacting V45 shapes within (<=) 0.12um from M5 edge on RIGHT = 240 um:1 contact
+R_38.14_M5_EDGE_V45_120nm_top
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M5 perimeter to number of interacting V45 shapes within (<=) 0.12um from M5 edge on TOP = 240 um:1 contact
+R_38.14_M5_EDGE_V45_120nm_bottom
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Maximum ratio of M5 perimeter to number of interacting V45 shapes within (<=) 0.12um from M5 edge on BOTTOM = 240 um:1 contact
+R_43.001_VK01_GRID
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+VK01 not on 0.005 um grid
+R_43.01_VK01_WIDTH
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Only allowed VK01_DRC width = 0.14 um x 0.14 um (orthogonal square)
+R_43.02_VK01_SP
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum VK01 spacing = 0.14 um
+R_43.03_VK01_M5_SUR
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M5 surround of VK01 = 0.02 um
+R_43.04_VK01_M5_SUR_2_SIDES
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum M5 surround of VK01 on at least 2 opposite edges = 0.04 um  
+R_43.05_VK01_M5
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Prohibited VK01 not M5
+R_44.001_MTK1_GRID
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+MTK1 not on 0.005 um grid
+R_44.01_MTK1_WIDTH
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum MTK1 width = 1 um
+R_44.02_MTK1_SPC
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum MTK1 spacing = 1 um
+R_44.03_MTK1_VK01_SUR
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum MTK1 surround of VK01 = 0.14 um
+R_44.04_MTK1FIL_ISOLATION
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Prohibited MTK1FIL touching non-fill MTK1
+R_44.05_MTK1_AREA
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum MTK1 area = 1 um sq.
+R_44.06_MTK1PIN_NOMTK1
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Prohibited MTK1PIN not MTK1
+R_45.001_VR01_GRID
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+VR01 not on 0.005 um grid
+R_45.01_VR01_WIDTH
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Only allowed VR01_DRC width = 1.25 um x 1.25 um (orthogonal square)
+R_45.02_VR01_SP
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum VR01 spacing = 1.25 um
+R_45.03_VR01_MTK1_SUR
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum MTK1 surround of VR01 = 0.5 um
+R_45.04_VR01_MTK1
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Prohibited VR01 not MTK1
+R_46.001_MRF1_GRID
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+MRF1 not on 0.005 um grid
+R_46.01_MRF1_WIDTH
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum MRF1 width = 5 um
+R_46.02_MRF1_SPC
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum MRF1 spacing = 5 um
+R_46.03_MRF1_VR01_SUR
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum MRF1 surround of VR01 = 0.5 um
+R_46.04_MRF1FIL_ISOLATION
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Prohibited MRF1FIL touching non-fill MRF1
+R_46.05_MRF1_AREA
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum MRF1 area = 25 um sq.
+R_46.06_MRF1PIN_NOMRF1
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Prohibited MRF1PIN not MRF1
+R_49.001_OGC_GRID
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+OGC not on 0.005 um grid
+R_49.01_OGC_WIDTH
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum OGC width = 5 um
+R_49.02_OGC_SPC
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum OGC spacing = 5 um
+R_49.03_OGC_TOPMETAL
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Prohibited OGC not TOPMETAL
+R_49.04_OGC_TOPMETAL_SUR
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum surround of OGC by TOPMETAL = 1 um
+R_49.WB.01
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+OGC exact dimension for wirebond = 73 * 98
+R_49.WB.02
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+Minimum GATE spacing to OGC for wirebond = 25
+R_52.002_INVALID_M2
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+M1,M2,M3,M4,M5 are not valid layers for DEVL
+R_52.002_INVALID_M3
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+M1,M2,M3,M4,M5 are not valid layers for DEVL
+R_52.002_INVALID_M4
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+M1,M2,M3,M4,M5 are not valid layers for DEVL
+R_55.002_INVALID_HV
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+HV is not a valid layer for this FEOL option
+R_58.002_INVALID_XLP
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+XLP is not a valid layer for this FEOL option
+R_64.002_INVALID_BV01
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+BV01 IS NOT A VALID LAYER
+R_65.002_INVALID_3DVC
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+3DVC IS NOT A VALID LAYER
+R_66.002_INVALID_BM1
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+BM1 IS NOT A VALID LAYER
+R_67.002_INVALID_BOGC1
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+BOGC1 IS NOT A VALID LAYER
+R_76.002_INVALID_3DVP
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+3DVP IS NOT A VALID LAYER
+R_86.002_INVALID_EXTS
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+EXTS rules do not run for cell-level design
+D_1.01
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+ACT_DENSMIN act density must be >= 0.25 within a 150um window
+D_1.02
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+ACT_DENSMAX act density must be <= 0.75 within a 150um window
+D_12.01
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+POLY_DENSMIN poly density must be >= 0.15 within a 150um window
+D_12.02
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+POLY_DENSMAX poly density must be <= 0.6 within a 150um window
+D_27.01
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+CON_DENSMIN  CON density must be <= 0.12 within a 50um window
+D_29.01
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+M1_DENSMIN  M1 density must be >= 0.3 within a 250um window
+D_29.02a
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+M1_DENSMAX M1 density must be <= 0.8 within a 250um window
+D_30.01
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+V12_DENSMIN  V12 density must be <= 0.12 within a 50um window
+D_32.01
+1 1 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+M2_DENSMIN M2 density must be >= 0.3 within a 250um window
+p 1 4
+CN dig_poly_NAND_NOR2_x1 c 1 0 0 1 0 0 0
+0 0
+7880 0
+7880 2560
+0 2560
+D_32.02a
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+M2_DENSMAX M2 density must be <= 0.8 within a 250um window
+D_33.01
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+V23_DENSMIN  V23 density must be <= 0.12 within a 50um window
+D_34.01
+1 1 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+M3_DENSMIN M3 density must be >= 0.3 within a 250um window
+p 1 4
+CN dig_poly_NAND_NOR2_x1 c 1 0 0 1 0 0 0
+0 0
+7880 0
+7880 2560
+0 2560
+D_34.02a
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+M3_DENSMAX M3 density must be <= 0.8 within a 250um window
+D_35.01
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+V34_DENSMIN  V34 density must be <= 0.12 within a 50um window
+D_36.01
+1 1 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+M4_DENSMIN M4 density must be >= 0.3 within a 250um window
+p 1 4
+CN dig_poly_NAND_NOR2_x1 c 1 0 0 1 0 0 0
+0 0
+7880 0
+7880 2560
+0 2560
+D_36.02a
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+M4_DENSMAX M4 density must be <= 0.8 within a 250um window
+D_37.01
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+V45_DENSMIN  V45 density must be <= 0.12 within a 50um window
+D_38.01
+1 1 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+M5_DENSMIN M5 density must be >= 0.3 within a 250um window
+p 1 4
+CN dig_poly_NAND_NOR2_x1 c 1 0 0 1 0 0 0
+0 0
+7880 0
+7880 2560
+0 2560
+D_38.02a
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+M5_DENSMAX M5 density must be <= 0.8 within a 250um window
+D_43.01
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+VK01_DENSMAX  VK01 density must be <= 0.12 within a 50um window
+D_44.01
+1 1 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+MTK1_DENSMIN MTK1 density must be >= 0.3 within a 250um window
+p 1 4
+CN dig_poly_NAND_NOR2_x1 c 1 0 0 1 0 0 0
+0 0
+7880 0
+7880 2560
+0 2560
+D_44.02a
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+MTK1_DENSMAX MTK1 density must be <= 0.8 within a 250um window
+D_45.01
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+VR01_DENSMAX  VR01 density must be <= 0.12 within a 50um window
+D_46.01
+1 1 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+MRF1_DENSMIN MRF1 density must be >= 0.3 within a 250um window
+p 1 4
+CN dig_poly_NAND_NOR2_x1 c 1 0 0 1 0 0 0
+0 0
+7880 0
+7880 2560
+0 2560
+D_46.02a
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+MRF1_DENSMAX MRF1 density must be <= 0.8 within a 250um window
+D_1.G
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+ACT_DENSMIN act density report written to FILE density_global_ACT.txt
+D_12.G
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+POLY_DENSMIN poly density report written to FILE density_global_POLY.txt
+D_29.G
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+M1_DENSMIN  M1 density report written to FILE density_global_M1.txt
+D_32.G
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+M2_DENSMIN M2 density report written to FILE density_global_M2.txt 
+D_34.G
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+M3_DENSMIN M3 density report written to FILE density_global_M3.txt 
+D_36.G
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+M4_DENSMIN M4 density report written to FILE density_global_M4.txt 
+D_38.G
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+M5_DENSMIN M5 density report written to FILE density_global_M5.txt 
+D_44.G
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+MTK1_DENSMIN MTK1 density report written to FILE density_global_MTK1.txt 
+D_46.G
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+MRF1_DENSMIN MRF1 density report written to FILE density_global_MRF1.txt 
+R_ANT29.01
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+For each net, ratio of (M1gate to gate area in total) should be less than < 40000 unless ratio of (M1sd to gate area) is less than < 2222.222
+R_ANT29.02
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+For each net, ratio of (M1sd to gate area in total) should be less than < 40000 unless ratio of (M1gate to gate area) is less than < 2222.222
+R_ANT32.01
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+For each net, ratio of (M2gate to gate area in total) should be less than < 40000 unless ratio of (M2sd to gate area) is less than < 2222.222
+R_ANT32.02
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+For each net, ratio of (M2sd to gate area in total) should be less than < 40000 unless ratio of (M2gate to gate area) is less than < 2222.222
+R_ANT34.01
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+For each net, ratio of (M3gate to gate area in total) should be less than < 40000 unless ratio of (M3sd to gate area) is less than < 2222.222
+R_ANT34.02
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+For each net, ratio of (M3sd to gate area in total) should be less than < 40000 unless ratio of (M3gate to gate area) is less than < 2222.222
+R_ANT36.01
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+For each net, ratio of (M4gate to gate area in total) should be less than < 40000 unless ratio of (M4sd to gate area) is less than < 2222.222
+R_ANT36.02
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+For each net, ratio of (M4sd to gate area in total) should be less than < 40000 unless ratio of (M4gate to gate area) is less than < 2222.222
+R_ANT38.01
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+For each net, ratio of (M5gate to gate area in total) should be less than < 40000 unless ratio of (M5sd to gate area) is less than < 2222.222
+R_ANT38.02
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+For each net, ratio of (M5sd to gate area in total) should be less than < 40000 unless ratio of (M5gate to gate area) is less than < 2222.222
+R_ANT44.01
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+For each net, ratio of (MTK1gate to gate area in total) should be less than < 40000 unless ratio of (MTK1sd to gate area) is less than < 2222.222
+R_ANT44.02
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+For each net, ratio of (MTK1sd to gate area in total) should be less than < 40000 unless ratio of (MTK1gate to gate area) is less than < 2222.222
+R_ANT46.01
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+For each net, ratio of (MRF1gate to gate area in total) should be less than < 40000 unless ratio of (MRF1sd to gate area) is less than < 2222.222
+R_ANT46.02
+0 0 2 Oct  4 12:33:40 2019                     
+Rule File Pathname: /local/scratch/a/socet30/mitll90_june2018_all_socet30/DRC1/_soi90nm_drc_top.rules_
+For each net, ratio of (MRF1sd to gate area in total) should be less than < 40000 unless ratio of (MRF1gate to gate area) is less than < 2222.222
+DENSITY_RDBS
+0 0 1 Oct  4 12:33:40 2019
+./density.rdb 6
+NET_AREA_RATIO_RDBS
+0 0 1 Oct  4 12:33:40 2019
+./antenna.rdb 0
+DENSITY_PRINT_FILES
+0 0 9 Oct  4 12:33:40 2019
+density_global_ACT.txt
+density_global_POLY.txt
+density_global_M1.txt
+density_global_M2.txt
+density_global_M3.txt
+density_global_M4.txt
+density_global_M5.txt
+density_global_MTK1.txt
+density_global_MRF1.txt
+DFM_RDBS
+0 0 1 Oct  4 12:33:40 2019
+./DFM.rdb

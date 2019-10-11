@@ -1,9 +1,8 @@
 # Polymorphic Obfuscation Logic Implimentation (POLI)
 ### Isaiah Grace, John Martinuk, Brain Graves
 
-## Branches
-These are the branches planned at the moment:
-- master
+## Submodules
+These are the IP submodules planned at the moment:
 - apb_slave <- Isaiah
 - control_register <- Isaiah
 - CRC_control <- John
