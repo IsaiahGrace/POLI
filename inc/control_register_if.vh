@@ -33,10 +33,10 @@ interface control_register_if;
    // CRC32 related signals
    // TODO: finalize interfaces for CRC32 signals
    // Outputs
-   logic [WORD_SIZE-1:0] data_in;
+   logic [WORD_SIZE-1:0] crc_data_in;
    logic 		 crc_reset;
    logic 		 crc_start;
-   logic [WORD_SIZE-1:0] orient;
+   logic [WORD_SIZE-1:0] crc_orient;
    
    // Inputs
    logic [WORD_SIZE-1:0] crc_out;
