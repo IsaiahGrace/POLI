@@ -50,6 +50,7 @@ module apb_slave (
 	  XOR_BUF_OUTPUT_ADDR:   apbif.register_select = XOR_BUF_OUTPUT;
 
 	  CRC_CONTROL_ADDR:      apbif.register_select = CRC_CONTROL;
+	  CRC_CONFIG_ADDR:       apbif.register_select = CRC_CONFIG;
 	  CRC_STATUS_ADDR:       apbif.register_select = CRC_STATUS;
 	  CRC_INPUT_ADDR:        apbif.register_select = CRC_INPUT;
 	  CRC_OUTPUT_ADDR:       apbif.register_select = CRC_OUTPUT;

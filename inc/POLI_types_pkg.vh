@@ -28,9 +28,10 @@ package POLI_types_pkg;
 
    // CRC register addresses
    localparam CRC_CONTROL_ADDR      = BASE_ADDR + 8'h18;
-   localparam CRC_STATUS_ADDR       = BASE_ADDR + 8'h1C;
-   localparam CRC_INPUT_ADDR        = BASE_ADDR + 8'h20;
-   localparam CRC_OUTPUT_ADDR       = BASE_ADDR + 8'h24;
+   localparam CRC_CONFIG_ADDR       = BASE_ADDR + 8'h1C;
+   localparam CRC_STATUS_ADDR       = BASE_ADDR + 8'h20;
+   localparam CRC_INPUT_ADDR        = BASE_ADDR + 8'h24;
+   localparam CRC_OUTPUT_ADDR       = BASE_ADDR + 8'h28;
       
      
    // register select type.
@@ -47,6 +48,7 @@ package POLI_types_pkg;
 			     XOR_BUF_OUTPUT,
    
 			     CRC_CONTROL,
+			     CRC_CONFIG,
 			     CRC_STATUS,
 			     CRC_INPUT,
 			     CRC_OUTPUT
