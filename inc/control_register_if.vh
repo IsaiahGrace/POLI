@@ -39,7 +39,7 @@ interface control_register_if;
    logic [WORD_SIZE-1:0] crc_orient;
    
    // Inputs
-   logic [WORD_SIZE-1:0] crc_out;
+   logic [WORD_SIZE-1:0] crc_data_out;
    logic 		 crc_ready;
    	       
    // NAND_NOR related signals
@@ -64,7 +64,7 @@ interface control_register_if;
 		    input  write_data, write_enable, register_select,
 		    output read_data,
    
-		    input  crc_out, crc_ready, 
+		    input  crc_data_out, crc_ready,
 		    output crc_data_in, crc_reset, crc_start, crc_orient,
    
 		    input  NAND_NOR_out,
