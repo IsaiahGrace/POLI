@@ -12,6 +12,9 @@ module sim_XOR_BUF (
    
    assign X = (Vxx & ~Vyy) ? A ^ B : A;
 
-   assert (Vxx == Vyy) $error("Vxx and Vyy cannot be equal: XOR_BUF");
+   /*
+   assert (Vxx != Vyy) 
+     else $error("Vxx and Vyy cannot be equal: XOR_BUF");
+   */
    
 endmodule // sim_XOR_BUF

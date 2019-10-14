@@ -11,7 +11,9 @@ module sim_NAND_NOR (
 
    assign X = (Vxx & ~Vyy) ? ~(A & B) : ~(A | B);
 
-   assert (Vxx == Vyy) $error("Vxx and Vyy cannot be equal: NAND_NOR");
-   
+   /*
+   assert (Vxx != Vyy)
+     else $error("Vxx and Vyy cannot be equal: NAND_NOR");
+   */
 endmodule // sim_NAND_NOR
 
