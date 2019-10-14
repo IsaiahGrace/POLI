@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      socet15
+HostName                       asicfab.ecn.purdue.edu
+ProcessIdentifier              24669
+ProcessCreationTime_UTC        1570643619
+ProcessCreationTime_Readable   Wed Oct  9 13:53:39 2019 EDT
+AppIdentifier                  OA File System Design Manager
+OSType                         unix
+ReasonForPlacingEditLock       OpenAccess edit lock
+FilePathUsedToEditLock         /local/scratch/a/socet15/mitll90_june2018_all_socet15/Poly/polymorphic_XOR_BUFF_v1/schematic/sch.oa.cdslck
+TimeEditLocked                 Wed Oct  9 14:11:06 2019 EDT
