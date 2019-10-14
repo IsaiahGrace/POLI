@@ -1,0 +1,36 @@
+subckt vncap pos neg
+
+parameters w=1u l=1u fw=220.0n nf=3 fs=200.0n toplev=5 botlev=1
+
+//numlayers=(m1_used+m2_used+m3_used+m4_used+m5_used)
+parameters m1_used=(botlev<=1 && toplev>=1)
+parameters m2_used=(botlev<=2 && toplev>=2)
+parameters m3_used=(botlev<=3 && toplev>=3)
+parameters m4_used=(botlev<=4 && toplev>=4)
+parameters m5_used=(botlev<=5 && toplev>=5)
+
+//"IsM2Bot" is 1 if M2 is the bottom layer of the stack
+//"IsM2Shielded" is 1 if M2 is in the stack, but is not the bottom metal
+parameters ism1bot=(botlev==1)
+parameters ism2bot=(botlev==2)
+parameters ism3bot=(botlev==3)
+parameters ism4bot=(botlev==4)
+parameters ism5bot=(botlev==5)
+
+parameters ism2shielded=(botlev<2 && toplev>=2)
+parameters ism3shielded=(botlev<3 && toplev>=3)
+parameters ism4shielded=(botlev<4 && toplev>=4)
+parameters ism5shielded=(botlev<5 && toplev>=5)
+
+parameters c_allfingers=1e-15*nf*(m1_used+m2_used+m3_used+m4_used+m5_used)*(log(pow(2.71828,(l/1e-6))-1+exp(3.29))-2.95)*0.0771
+//parameters c_allfingers=1e-15*nf*(m1_used+m2_used+m3_used+m4_used+m5_used)*(log(exp(l/1e-6)-1+exp(3.29))-2.95)*0.0771
+parameters c_pos=1e-15*nf*(l/1e-6 + 2.5)*(ism1bot*0.015 + ism2bot*0.0095 + ism3bot*0.0075 + ism4bot*0.0065 + ism5bot*0.0059 + ism2shielded*0.0027 + ism3shielded*0.0043 + ism4shielded*0.0040 + ism5shielded*0.0036)
+parameters c_neg=c_pos
+
+cdevice (pos neg) capacitor c=c_allfingers
+cc_pos (pos 0) capacitor c=c_pos
+cc_neg (neg 0) capacitor c=c_neg
+
+ends vncap
+
+ 

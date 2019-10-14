@@ -1,0 +1,9 @@
+
+include "nnoslc_poly.scs"
+include "nslc_poly.scs"
+include "pnoslc_poly.scs"
+include "pslc_poly.scs"
+
+include "cappres.scs"
+
+include "vncap.scs"

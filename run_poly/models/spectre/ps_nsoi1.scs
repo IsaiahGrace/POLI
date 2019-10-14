@@ -1,0 +1,88 @@
+model ps_nsoi1 bsimsoi type=n
+***** flag parameter ***
++level = 70                    version = 4.5                 soimod = 0                    
++shmod = 1                     binunit = 1                   mobmod = 1                    
++capmod = 2                    igcmod = 1                    igbmod = 1                    
++rgatemod = 1                  gidlmod = 0                   fdmod = 0                     
+***** process parameter ***
++tsi = 2.8e-8                  tbox = 1.4e-7                 tox = 1.7e-9                  
++xj = 1e-7                     nch = 1e18                    nsub = 1e15                   
++ngate = 1e20                  
+***** vth related  parameter ***
++vth0 = vth0_nsoi1_calc        k1 = -0.1                     k1w1 = 0                      
++k1w2 = 0                      k2 = 0                        k3 = 7                        
++k3b = 0                       kb1 = 0                       w0 = 0                        
++lpe0 = -1e-8                  lpeb = 0                      dvt0 = -0.15                  
++dvt1 = 0.181                  dvt2 = 0                      dvt0w = 0                     
++dvt1w = 1e5                   dvt2w = 0                     dvtp0 = 0                     
++dvtp1 = 0                     dvtp2 = 0                     dvtp3 = 0                     
++dvtp4 = 0                     
+***** mobility related parameter ***
++u0 = 210                      ua = 0                        ub = 4.5e-19                  
++uc = 0                        vsat = 1.15e5                 a0 = -0.2                     
++ags = 0                       b0 = 0                        b1 = 0                        
++keta = 0                      ketas = 0                     a1 = 0                        
++a2 = 0.495                    rdsw = 30.6                   prwb = 0                      
++prwg = 0                      wr = 0.549                    
+***** subthreshold related parameter ***
++voff = -0.145                 nfactor = 1                   eta0 = 0.0762                 
++etab = 0                      dsub = 0.2                    cit = 0                       
++cdsc = 8e-3                   cdscb = 0.01                  cdscd = 6.17e-4               
+***** dw and dl parameter ***
++lint = lint_nsoi1_calc        ll = 0                        lln = 2                       
++lw = 0                        lwn = 1                       lwl = 0                       
++wint = wint_nsoi1_calc        dwg = 0                       dwb = 0                       
++wl = 0                        wln = 1                       ww = 0                        
++wwn = 1                       wwl = 0                       
+***** output resistance related parameter ***
++pclm = 0                      lpclm = 0                     wpclm = 0.25                  
++pdiblc1 = 0.0203              pdiblc2 = 0                   pdiblcb = 0                   
++drout = 7.82e-3               pvag = 0                      delta = 0.01                  
++alpha0 = 1e-8                 fbjtii = 0                    beta0 = 0                     
++beta1 = 0                     beta2 = 0.13                  vdsatii0 = 1.14               
++tii = -0.226                  lii = 0                       esatii = 1e8                  
++sii0 = 1                      sii1 = 0                      sii2 = 0                      
++siid = 0                      agidl = 4e-13                 bgidl = 1e8                   
++cgidl = 0                     egidl = 0.72                  ntun = 10                     
++ndiode = 1.3                  ndioded = 1.3                 nrecf0 = 1.6                  
++nrecf0d = 1.6                 nrecr0 = 10                   nrecr0d = 10                  
++isbjt = 3e-7                  idbjt = 3e-7                  isdif = 4.5e-8                
++iddif = 4.5e-8                isrec = 1e-4                  idrec = 1e-4                  
++istun = 1e-5                  ln = 1e-11                    vrec0 = 0.05                  
++vtun0 = 0                     nbjt = 1.5                    lbjt0 = 2e-7                  
++vabjt = 10                    aely = 0                      ahli = 1e-15                  
++rbody = 10                    rbsh = 100                    rhalo = 1e15                  
++minv = -1                     lminv = 0                     wminv = 0                     
+***** gate-to-body tunneling parameters ***
++aigc = 0.0165                 bigc = 0                      cigc = 0.0273                 
++aigsd = 0.018128              bigsd = 2.7e-3                cigsd = 0.066                 
++nigc = 4                      pigcd = 0.5                   dlcig = 1e-9                  
++ntox = 1.024                  toxref = 2.5e-9               ebg = 1.15                    
++alphagb1 = 0.35               betagb1 = 0.03                vgb1 = 200                    
++vevb = 0.89                   alphagb2 = 0.43               betagb2 = 0.06                
++vgb2 = 200                    vecb = 0.2                    
+***** ac and capacitance parameter ***
++xpart = 0                     cgso = 2.5e-10                cgdo = 6e-10                  
++cgeo = 0                      cjswg = 8e-10                 mjswg = 0.5                   
++pbswg = 0.9                   tt = 3e-10                    ndif = -1                     
++ldif0 = 1e-3                  vsdfb = -0.8                  vsdth = -0.3                  
++csdmin = 1.6e-5               asd = 0.3                     csdesw = 0                    
++cgsl = 0                      cgdl = 0                      ckappa = 0.6                  
++cf = 0                        clc = 5e-8                    cle = 0.6                     
++dlcb = 0                      dlbg = 0                      delvt = 0                     
++fbody = 1                     acde = 0.11                   moin = 15                     
+***** temperature coefficient ***
++tnom = 22                     ute = -1.8                    kt1 = -0.16                   
++kt1l = 0                      kt2 = -0.0646                 ua1 = 0                       
++ub1 = 0                       uc1 = 0                       at = 3.4e4                    
++tcjswg = 5e-4                 cth0 = 1e-5                   prt = 10                      
++rth0 = 0.08                   ntrecf = -0.3                 ntrecr = 10                   
++xbjt = 1.15                   xdif = 1.11                   xrec = 0.9                    
++xtun = 0                      wth0 = 4e-6                   
+***** bsimsoi built-in potential lowering model parameters ***
++vbsa = -0.127                 nofffd = 1                    vofffd = 0                    
++k1b = 1.1                     k2b = 0.5                     dk2b = 0.3                    
++dvbd0 = 0                     dvbd1 = 0.3                   moinfd = 1e6                  
+***** rf model parameters ***
++rshg = 1.6                    xrcrg1 = 12                   xrcrg2 = 1                    
++ngcon = 1                     xgw = 0                       xgl = 0

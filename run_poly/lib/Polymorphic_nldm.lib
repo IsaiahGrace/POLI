@@ -1,0 +1,196 @@
+library (Polymorphic) {
+  /* Models written by Liberate dev from Cadence Design Systems, Inc. on Mon Oct 14 15:27:32 EDT 2019 */
+  comment : "";
+  date : "$Date: Mon Oct 14 15:27:23 2019 $";
+  revision : "1.0";
+  delay_model : table_lookup;
+  capacitive_load_unit (1,pf);
+  current_unit : "1mA";
+  leakage_power_unit : "1nW";
+  pulling_resistance_unit : "1kohm";
+  time_unit : "1ns";
+  voltage_unit : "1V";
+  voltage_map (VDD, 1.2);
+  voltage_map (VSS, 0);
+  voltage_map (GND, 0);
+  default_cell_leakage_power : 0;
+  default_fanout_load : 1;
+  default_max_transition : 0.3;
+  default_output_pin_cap : 0;
+  in_place_swap_mode : match_footprint;
+  input_threshold_pct_fall : 50;
+  input_threshold_pct_rise : 50;
+  nom_process : 1;
+  nom_temperature : 25;
+  nom_voltage : 1.2;
+  output_threshold_pct_fall : 50;
+  output_threshold_pct_rise : 50;
+  slew_derate_from_library : 1;
+  slew_lower_threshold_pct_fall : 20;
+  slew_lower_threshold_pct_rise : 20;
+  slew_upper_threshold_pct_fall : 80;
+  slew_upper_threshold_pct_rise : 80;
+  operating_conditions (PVT_1P2V_25C) {
+    process : 1;
+    temperature : 25;
+    voltage : 1.2;
+  }
+  default_operating_conditions : PVT_1P2V_25C;
+  lu_table_template (constraint_template_7x7) {
+    variable_1 : constrained_pin_transition;
+    variable_2 : related_pin_transition;
+    index_1 ("0.01, 0.0176273, 0.0310723, 0.0547723, 0.0965489, 0.17019, 0.3");
+    index_2 ("0.01, 0.0176273, 0.0310723, 0.0547723, 0.0965489, 0.17019, 0.3");
+  }
+  lu_table_template (delay_template_7x7) {
+    variable_1 : input_net_transition;
+    variable_2 : total_output_net_capacitance;
+    index_1 ("0.01, 0.0176273, 0.0310723, 0.0547723, 0.0965489, 0.17019, 0.3");
+    index_2 ("0.001, 0.00201035, 0.0040415, 0.00812481, 0.0163337, 0.0328364, 0.0660125");
+  }
+  lu_table_template (mpw_constraint_template_7x7) {
+    variable_1 : constrained_pin_transition;
+    index_1 ("0.01, 0.0176273, 0.0310723, 0.0547723, 0.0965489, 0.17019, 0.3");
+  }
+  power_lut_template (passive_power_template_7x1) {
+    variable_1 : input_transition_time;
+    index_1 ("0.01, 0.0176273, 0.0310723, 0.0547723, 0.0965489, 0.17019, 0.3");
+  }
+  power_lut_template (power_template_7x7) {
+    variable_1 : input_transition_time;
+    variable_2 : total_output_net_capacitance;
+    index_1 ("0.01, 0.0176273, 0.0310723, 0.0547723, 0.0965489, 0.17019, 0.3");
+    index_2 ("0.001, 0.00201035, 0.0040415, 0.00812481, 0.0163337, 0.0328364, 0.0660125");
+  }
+  lu_table_template (waveform_template_name) {
+    variable_1 : input_net_transition;
+    variable_2 : normalized_voltage;
+    index_1 ("0, 1, 2, 3, 4");
+    index_2 ("0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16");
+  }
+  normalized_driver_waveform (waveform_template_name) {
+    driver_waveform_name : "PreDriver20.5:rise";
+    index_1 ("0.3");
+    index_2 ("0, 0.05, 0.0543201, 0.126015, 0.2, 0.28178, 0.362839, 0.442588, 0.515655, 0.587655, 0.658428, 0.727955, 0.8, 0.849933, 0.897636, 0.949849, 1");
+    values ( \
+      "0, 0.05, 0.0525, 0.075, 0.1, 0.13, 0.1625, 0.1975, 0.2325, 0.27, 0.31, 0.3525, 0.4, 0.435, 0.47, 0.51, 0.55" \
+    );
+  }
+  normalized_driver_waveform (waveform_template_name) {
+    driver_waveform_name : "PreDriver20.5:fall";
+    index_1 ("0.3");
+    index_2 ("0, 0.05, 0.0543201, 0.126015, 0.2, 0.28178, 0.362839, 0.442588, 0.515655, 0.587655, 0.658428, 0.727955, 0.8, 0.849933, 0.897636, 0.949849, 1");
+    values ( \
+      "0, 0.05, 0.0525, 0.075, 0.1, 0.13, 0.1625, 0.1975, 0.2325, 0.27, 0.31, 0.3525, 0.4, 0.435, 0.47, 0.51, 0.55" \
+    );
+  }
+  normalized_driver_waveform (waveform_template_name) {
+    index_1 ("0.3");
+    index_2 ("0, 0.05, 0.0543201, 0.126015, 0.2, 0.28178, 0.362839, 0.442588, 0.515655, 0.587655, 0.658428, 0.727955, 0.8, 0.849933, 0.897636, 0.949849, 1");
+    values ( \
+      "0, 0.05, 0.0525, 0.075, 0.1, 0.13, 0.1625, 0.1975, 0.2325, 0.27, 0.31, 0.3525, 0.4, 0.435, 0.47, 0.51, 0.55" \
+    );
+  }
+  cell (dig_poly_XOR_BUF2_x1) {
+    area : 0;
+    cell_leakage_power : 0;
+    leakage_power () {
+      value : 0;
+      when : "(A * B * orient * X)";
+    }
+    leakage_power () {
+      value : 0;
+      when : "(A * B * orient * !X)";
+    }
+    leakage_power () {
+      value : 0;
+      when : "(A * B * !orient * X)";
+    }
+    leakage_power () {
+      value : 0;
+      when : "(A * B * !orient * !X)";
+    }
+    leakage_power () {
+      value : 0;
+      when : "(A * !B * orient * X)";
+    }
+    leakage_power () {
+      value : 0;
+      when : "(A * !B * orient * !X)";
+    }
+    leakage_power () {
+      value : 0;
+      when : "(A * !B * !orient * X)";
+    }
+    leakage_power () {
+      value : 0;
+      when : "(A * !B * !orient * !X)";
+    }
+    leakage_power () {
+      value : 0;
+      when : "(!A * B * orient * X)";
+    }
+    leakage_power () {
+      value : 0;
+      when : "(!A * B * orient * !X)";
+    }
+    leakage_power () {
+      value : 0;
+      when : "(!A * B * !orient * X)";
+    }
+    leakage_power () {
+      value : 0;
+      when : "(!A * B * !orient * !X)";
+    }
+    leakage_power () {
+      value : 0;
+      when : "(!A * !B * orient * X)";
+    }
+    leakage_power () {
+      value : 0;
+      when : "(!A * !B * orient * !X)";
+    }
+    leakage_power () {
+      value : 0;
+      when : "(!A * !B * !orient * X)";
+    }
+    leakage_power () {
+      value : 0;
+      when : "(!A * !B * !orient * !X)";
+    }
+    pin (X) {
+      direction : output;
+      function : "0";
+    }
+    pin (A) {
+      driver_waveform_fall : "PreDriver20.5:fall";
+      driver_waveform_rise : "PreDriver20.5:rise";
+      direction : input;
+      capacitance : 0.00146551;
+      rise_capacitance : 0.00146551;
+      rise_capacitance_range (0.00146551, 0.00146551);
+      fall_capacitance : 0.00108289;
+      fall_capacitance_range (0.00108289, 0.00108289);
+    }
+    pin (B) {
+      driver_waveform_fall : "PreDriver20.5:fall";
+      driver_waveform_rise : "PreDriver20.5:rise";
+      direction : input;
+      capacitance : 0.000887774;
+      rise_capacitance : 0.000887774;
+      rise_capacitance_range (0.000887774, 0.000887774);
+      fall_capacitance : 0.000568444;
+      fall_capacitance_range (0.000568444, 0.000568444);
+    }
+    pin (orient) {
+      driver_waveform_fall : "PreDriver20.5:fall";
+      driver_waveform_rise : "PreDriver20.5:rise";
+      direction : input;
+      capacitance : 0.00113145;
+      rise_capacitance : 0.00113145;
+      rise_capacitance_range (0.00113145, 0.00113145);
+      fall_capacitance : 0.000993243;
+      fall_capacitance_range (0.000993243, 0.000993243);
+    }
+  }
+}

@@ -1,0 +1,14 @@
+**  MITLL 90nm SOI     03_07_2019
+**  template model for evaluation purposes only
+simulator lang=spectre
+subckt cappres (POS NEG)
+parameters
+
++ l = 5u
++ w = 2u
++ rsh = 3100
+
+** Netlist:
+Rdevice (POS NEG) resistor r=(rsh*l)/w
+ends cappres
+

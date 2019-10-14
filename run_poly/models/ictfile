@@ -1,0 +1,272 @@
+#mitll090nm.ict
+#Peter Grossmann
+#3 April 2012
+#$Id: MITLL090nm#mitll090nm_T1M5.ict,v 1.11 2017-11-17 11:27:20-05 jwoods Exp $
+#$Log: MITLL090nm#mitll090nm_T1M5.ict,v $
+#Revision 1.11  2017-11-17 11:27:20-05  jwoods
+#CESL
+#
+#Revision 1.10  2016-12-15 13:38:38-05  jwoods
+#BEOL_v2; thin metal=0.185um
+#
+#Revision 1.9  2016-12-05 14:40:45-05  jwoods
+#...No comments entered during checkin...
+#
+#Revision 1.8  2016-07-11 13:59:12-04  jwoods
+#M1-M5 thickness to be 0.23um and related R changes
+#
+#Revision 1.7  2016-03-15 12:16:53-04  jwoods
+#Found that M5 height was wrong. Fixed it
+#
+#Revision 1.6  2016-03-08 08:50:53-05  jwoods
+#Resistance parameter updated to match 2016.1 design guide
+#
+#Revision 1.5  2014-09-15 16:43:20-04  grossmann
+#Update Mx spacing to new 0.16um rule
+#
+#Revision 1.4  2014-09-05 15:57:42-04  grossmann
+#Update M1 spacing to 0.14; legacy checkin from summer 2013
+#
+#Revision 1.3  2013-07-02 13:52:01-04  grossmann
+#Update ILD dielectric constant from 3.9 to 4.2 for design guide consistency
+#
+#Revision 1.2  2013-05-22 13:57:45-04  grossmann
+#Correction to files to correctly generate M1 fringing capacitance (required addition of bottom-level dielectric)
+#
+#Revision 1.1  2012-04-11 09:30:26-04  mtownsend
+#initial version
+#
+
+#This file is an interconnect technology (ICT) file for the 90nm 
+#MEL process.  This file gets fed to First Encounter to generate
+#cap tables for place and route
+ 
+#The structure of this file is based on the Cadence example in 
+#Ch. 41 of the Encounter Digital Implementation System User Guide
+#Product Version 9.1.3
+
+#########################################################################
+# Process declaration.
+#########################################################################
+
+process "mitll090nm" {
+
+    background_dielectric_constant 1.0
+
+}
+
+#########################################################################
+# Diffusion declarations.
+#########################################################################
+
+diffusion "ACT" {
+
+    height 0.145
+    thickness 0.03
+    resistivity 15
+
+}
+
+#########################################################################
+# Conducting layer declarations.
+#########################################################################
+
+conductor "POLY" {
+
+    min_spacing 0.15
+    min_width 0.09
+    height 0.145
+    thickness 0.12
+    resistivity 15
+    gate_forming_layer true
+
+}
+
+conductor "M1" {
+
+    min_spacing 0.16
+    min_width 0.14
+    height 0.565
+    thickness 0.185
+    resistivity 0.28
+    gate_forming_layer false
+
+}
+
+conductor "M2" {
+
+    min_spacing 0.16
+    min_width 0.14
+    height 1.17
+    thickness 0.185
+    resistivity 0.28
+    gate_forming_layer false
+
+}
+
+conductor "M3" {
+
+    min_spacing 0.16
+    min_width 0.14
+    height 1.775
+    thickness 0.185
+    resistivity 0.28
+    gate_forming_layer false
+
+}
+
+conductor "M4" {
+
+    min_spacing 0.16
+    min_width 0.14
+    height 2.380
+    thickness 0.185
+    resistivity 0.28
+    gate_forming_layer false
+
+}
+
+conductor "M5" {
+
+    min_spacing 0.16
+    min_width 0.14
+    height 2.985
+    thickness 0.185
+    resistivity 0.28
+    gate_forming_layer false
+
+}
+
+#########################################################################
+# Dielectric and passivation layer declarations.
+#########################################################################
+
+dielectric "ILD_BOTTOM" {
+
+    conformal false
+    height 0
+    thickness 0.145
+    dielectric_constant 4.20
+
+}
+
+dielectric "ILD_CESL_over_poly" {
+
+    conformal true
+    expanded_from POLY
+    height 0.145
+    thickness 0.050
+    top_thickness 0.050
+    side_expand 0.050		
+    dielectric_constant 8.0
+
+}
+
+dielectric "ILD_LTO" {
+
+    conformal false
+    height 0.195
+    thickness 0.370		
+    dielectric_constant 4.20
+
+}
+
+dielectric "ILD12" {
+
+    conformal false
+    height 0.565
+    thickness 0.605
+    dielectric_constant 4.20
+
+}
+
+dielectric "ILD23" {
+
+    conformal false
+    height 1.17
+    thickness 0.605
+    dielectric_constant 4.20
+
+}
+
+dielectric "ILD34" {
+
+    conformal false
+    height 1.775
+    thickness 0.605
+    dielectric_constant 4.20
+
+}
+
+dielectric "ILD45" {
+
+    conformal false
+    height 2.380
+    thickness 0.605
+    dielectric_constant 4.20
+
+}
+
+
+#########################################################################
+
+passivation "Passivation" {
+
+    conformal false
+    height 2.985
+    thickness 0.51
+    dielectric_constant 4.20
+}
+
+#########################################################################
+# Contacts and Via declarations.
+#########################################################################
+
+via "CON" {
+
+    top_layer M1
+    bottom_layer POLY
+    contact_resistance 35
+
+}
+
+via "CON" {
+
+    top_layer M1
+    bottom_layer ACT
+    contact_resistance 30
+
+}
+
+via "V12" {
+
+    top_layer M2
+    bottom_layer M1
+    contact_resistance 10
+
+}
+
+via "V23" {
+
+    top_layer M3
+    bottom_layer M2
+    contact_resistance 10
+
+}
+
+via "V34" {
+
+    top_layer M4
+    bottom_layer M3
+    contact_resistance 10
+
+}
+
+via "V45" {
+
+    top_layer M5
+    bottom_layer M4
+    contact_resistance 10
+
+}
+

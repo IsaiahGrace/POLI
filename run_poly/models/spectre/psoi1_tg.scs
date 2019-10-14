@@ -1,0 +1,10 @@
+
+subckt psoi1_tg (S G D B X)
+parameters \
+	l=0  \
+	w=0  \
+	nf=1  \
+
+psoi1_tg (S G D B X) ps_psoi1 l=l w=nf*w nf=nf
+
+ends psoi1_tg

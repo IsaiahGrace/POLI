@@ -1,0 +1,8 @@
+
+subckt nsoi1 (d g s b)
+
+parameters l=90n w=200n nf=1
+
+M0 (d g s b) ps_nsoi1 l=l w=nf*w nf=nf
+
+ends
