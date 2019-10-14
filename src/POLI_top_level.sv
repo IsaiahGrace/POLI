@@ -12,6 +12,8 @@
 `include "control_register_if.vh"
 `include "crc_generator_if.vh"
 
+// Import types
+import POLI_types_pkg::*;
 
 module POLI_top_level 
   (
@@ -22,9 +24,6 @@ module POLI_top_level
    output logic [WORD_SIZE-1:0] PRDATA,
    output logic 		PREADY
    );
-
-   // Import types
-   import POLI_types_pkg::*;
 
    // Local interface declerations
    apb_slave_if apbif ();
@@ -43,11 +42,11 @@ module POLI_top_level
    assign PREADY = apbif.PREADY;
 
    // apb_slave <-> control_register
-   assign apbif.write_data = crif.write_data;
-   assign apbif.write_enable = crif.write_enable;
-   assign apbif.register_select = crif.register_select;
-   assign crif.read_data = apbif.read_data;
-
+   assign apbif.read_data = crif.read_data;
+   assign crif.write_data = apbif.write_data;
+   assign crif.write_enable = apbif.write_enable;
+   assign crif.register_select = apbif.register_select;
+   
    // control_register <-> crc_generator
    assign crcif.crc_data_in = crif.crc_data_in;
    assign crcif.crc_reset = crif.crc_reset;
@@ -62,17 +61,17 @@ module POLI_top_level
    crc_generator crc_generator (CLK, nRST, crcif);
 
    // Individual NAND/NOR gate
-   sim_wrapper_NAND_NOR (.A (crif.NAND_NOR_a),
-			 .B (crif.NAND_NOR_b),
-			 .orient (crif.NAND_NOR_orient),
-			 .X (crif.NAND_NOR_out)
-			 );
-      
+   sim_wrapper_NAND_NOR NAND_NOR (.A (crif.NAND_NOR_a),
+				  .B (crif.NAND_NOR_b),
+				  .orient (crif.NAND_NOR_orient),
+				  .X (crif.NAND_NOR_out)
+				  );
+   
    // Individual XOR/BUF gate
-   sim_wrapper_XOR_BUF (.A (crif.XOR_BUF_a),
-			.B (crif.XOR_BUF_b),
-			.orient (crif.XOR_BUF_orient),
-			.X (crif.XOR_BUF_out)
-			);
-      
+   sim_wrapper_XOR_BUF XOR_BUF (.A (crif.XOR_BUF_a),
+				.B (crif.XOR_BUF_b),
+				.orient (crif.XOR_BUF_orient),
+				.X (crif.XOR_BUF_out)
+				);
+   
 endmodule // POLI_top_level
