@@ -1,7 +1,9 @@
 /*
  John Martinuk
  jmartinu@purdue.edu
-
+ 
+ Isaiah Grace
+ igrace@purdue.edu
  */
 `include "crc_generator_if.vh"
 
@@ -12,9 +14,9 @@ module crc32 (
    
    logic [5:0] 	    count;
    logic [5:0] 	    n_count;
-   logic [31:0]     n_crc;
+   logic [31:0]     n_crc_data_out;
    logic [31:0]     curr_data;
-   logic [31:0]     n_data;
+   logic [31:0]     n_curr_data;
    logic 	    crc_enable;
    logic [31:0]     curr_orient;
    
@@ -34,46 +36,6 @@ module crc32 (
 	  end
      end // always_ff @ (posedge CLK, negedge nRST)
 
-
-   //Data and CRC data
-   always_ff @(posedge CLK, negedge nRST)
-     begin
-	if(!nRST)
-	  begin
-	     crc.crc_data_out <= '0;
-             curr_data <= '0;
-	  end
-	else
-	  begin
-             crc.crc_data_out <= crc.crc_data_out;
-             curr_data <= curr_data;
-             curr_orient <= (count == '0) ? crc.crc_orient : curr_orient;
-	     
-             if (crc_enable) begin
-	        crc.crc_data_out <= n_crc;
-		curr_data <= n_data;
-             end
-             else if (crc.crc_reset && crc.crc_ready) begin
-		crc.crc_data_out <= crc.crc_data_in;
-		curr_data <= crc.crc_data_in;
-             end
-	  end
-     end // always_ff @ (posedge CLK, negedge nRST)
-   
-   
-   //next data logic
-   assign n_data = (crc.crc_ready) ? crc.crc_data_in : {curr_data[30:0], 1'b0};
-   /*
-   always_comb
-     begin
-	n_data = (count == '0) ? crc.crc_data_in : {curr_data[30:0], 1'b0};
-	if (count == '0) begin
-	   n_data = crc.crc_data_in;
-	end
-     end
-   */
-
-
    // next count logic
    always_comb
      begin
@@ -91,13 +53,52 @@ module crc32 (
 	     n_count = '0;
 	  end
      end // always_comb
+
+
+   //Data and CRC data
+   always_ff @(posedge CLK, negedge nRST)
+     begin
+	if(!nRST)
+	  begin
+	     crc.crc_data_out <= '0;
+             curr_data <= '0;
+	  end
+	else
+	  begin
+             crc.crc_data_out <= crc.crc_data_out;
+             curr_data <= curr_data;
+             curr_orient <= (count == '0) ? crc.crc_orient : curr_orient;
+	     
+             if (crc_enable) begin
+	        crc.crc_data_out <= n_crc_data_out;
+		curr_data <= n_curr_data;
+             end
+             else if (crc.crc_reset && crc.crc_ready) begin
+		crc.crc_data_out <= crc.crc_data_in;
+		curr_data <= crc.crc_data_in;
+             end
+	  end
+     end // always_ff @ (posedge CLK, negedge nRST)
    
+   
+   //next data logic
+   //assign n_curr_data = (crc.crc_ready) ? crc.crc_data_in : {curr_data[30:0], 1'b0};
+   //assign n_curr_data = (crc.crc_ready) ? crc.crc_data_in : {curr_data[30:0], 1'b0};
+   
+   always_comb
+     begin
+	n_curr_data = {curr_data[30:0], 1'b0};
+	if (count == '0) begin
+	   n_curr_data = crc.crc_data_in;
+	end
+     end
+      
    
    sim_wrapper_XOR_BUF A0 (
 			   .A(curr_data[31]),
 			   .B(crc.crc_data_out[31]),
 			   .orient(curr_orient[0]),
-			   .X(n_crc[0])
+			   .X(n_crc_data_out[0])
 			   );
    
    genvar i;
@@ -108,7 +109,7 @@ module crc32 (
 				  .A(crc.crc_data_out[i - 1]),
 				  .B(crc.crc_data_out[31]),
 				  .orient(curr_orient[i]),
-				  .X(n_crc[i])
+				  .X(n_crc_data_out[i])
 				  );
 	end
    endgenerate

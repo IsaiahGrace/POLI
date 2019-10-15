@@ -115,12 +115,21 @@ program crc_test (
 	  else $error("Double start corrupted crc state");
 	reset_DUT();
 		
-       // Setting a new polynomial during opperation does not currupt operation in progress
+	// Setting a new polynomial during opperation does not currupt operation in progress
 	@(posedge CLK);
 	test_case++;
 	test_name = "Polynomial change after start";
-	crcif.crc_data_in = 32'h00AA0055;
-	crcif.crc_orient = 32'hFFFF44FF;
+	crcif.crc_data_in = 32'h124721AB;
+	@(negedge CLK);
+	crcif.crc_reset = 1'b1;
+	@(negedge CLK);
+	crcif.crc_reset = 1'b0;
+	@(posedge CLK);	
+	crcif.crc_data_in = 32'hF0AA0055;
+	crcif.crc_orient = 32'h82608EDB;
+	// From Matlab crc32 documentation
+	//   100000 1    001      1 000001   0001      1      1    01     1    01     1    01   1
+	//z^32 + z^26 + z^23 + z^22 + z^16 + z^12 + z^11 + z^10 + z^8 + z^7 + z^5 + z^4 + z^2 + z + 1
 	@(posedge CLK);
 	crcif.crc_start = 1'b1;
 	@(posedge CLK);
@@ -132,41 +141,49 @@ program crc_test (
 	  begin
 	     @(posedge CLK);
 	     timeout++;
+	     if (timeout > 12)
+	       crcif.crc_orient = 32'h00000000;
 	     assert (timeout < 40)
 	       else $fatal("Timout exeeded 40 cycles while waiting for ready flag");
 	  end
 	@(posedge CLK);
-	assert (crcif.crc_data_out == 32'h00AA0055)
+	assert (crcif.crc_data_out == 32'h940D4516)
 	  else $error("Polynomial write corrupted crc state");
+	reset_DUT();
 	
-	//reset_DUT();
-	
-	/*
-	 TRY WRITING NEW POLYNOMIAL IN THE MIDDLE OF CRC GEN
-	 WRITE(CRC_INPUT, 0xFF)
-	 WRITE(CRC_CONFIG, 0xAA)
-	 WRITE(CRC_CONTROL, 0x1)
-	 WRITE(CRC_CONFIG, 0x55)
-	 *wait*
-	 READ(CRC_STATUS, expect=0x1)
-	 READ(CRC_OUTPUT, expect=) // expect 0xff with 0xAA as CRC orient
-	 
-	 TRY CHANGING INPUT_DATA MID PROCESS
-	 WRITE(CRC_INPUT, 0xFF)
-	 WRITE(CRC_CONTROL, 0x1)
-	 WRITE(CRC_INPUT, 0xAA)
-	 *wait*
-	 READ(CRC_STATUS, expect=0x1)
-	 READ(CRC_OUTPUT, expect=0xFF)
-	 
-	 CHANGE POLYNOMIAL 3 TIMES AND SHOW A CRC THAT COMES OUT AS ZERO
-	 */
-	
-	// TOGGLE COVERAGE
+	// Changeing data during opperation does not currupt operation in progress
 	@(posedge CLK);
+	test_case++;
+	test_name = "Data change after start";
+	crcif.crc_data_in = 32'h124721AB;
+	@(negedge CLK);
+	crcif.crc_reset = 1'b1;
+	@(negedge CLK);
+	crcif.crc_reset = 1'b0;
+	@(posedge CLK);	
+	crcif.crc_data_in = 32'hF0AA0055;
+	crcif.crc_orient = 32'h82608EDB;
 	@(posedge CLK);
+	crcif.crc_start = 1'b1;
 	@(posedge CLK);
-	
+	crcif.crc_start = 1'b0;
+	//crcif.crc_orient
+	// Wait for ready flag
+	timeout = 0;
+	while (crcif.crc_ready != 1'b1)
+	  begin
+	     @(posedge CLK);
+	     timeout++;
+	     if (timeout > 12)
+	       crcif.crc_data_in = 32'hFFFFFFFF;
+	     assert (timeout < 40)
+	       else $fatal("Timout exeeded 40 cycles while waiting for ready flag");
+	  end
+	@(posedge CLK);
+	assert (crcif.crc_data_out == 32'h940D4516)
+	  else $error("Data write corrupted crc state");
+	reset_DUT();
+
      end // initial begin
    
 endprogram // crc_test

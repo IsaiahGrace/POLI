@@ -19,12 +19,13 @@ module apb_slave (
    import POLI_types_pkg::*;
 
    // Local signals and registers
-   logic [WORD_SIZE-1:0] data_buff;
+   //logic [WORD_SIZE-1:0] data_buff;
    logic 		 nxt_PREADY;
    
    
    // PRDATA can always be the data in the output buffer, It doesn't matter if it's garbage when PSEL is LOW
-   assign apbif.PRDATA = data_buff;
+   assign apbif.PRDATA = apbif.PREADY ? apbif.read_data : 32'hbad5bad5;
+   //data_buff;
 
    // write_data can be wired to PWDATA all the time, we will only assert the control signals when appropriate
    assign apbif.write_data = apbif.PWDATA;
@@ -64,12 +65,12 @@ module apb_slave (
      begin
 	if (nRST == 1'b0)
 	  begin
-	     data_buff <= 0;
+	     //data_buff <= 0;
 	     apbif.PREADY <=0;
 	  end
 	else
 	  begin
-	     data_buff <= apbif.read_data;
+	     //data_buff <= apbif.read_data;
 	     apbif.PREADY <= nxt_PREADY;
 	  end
      end // always_ff @ (posedge CLK, negedge nRST)

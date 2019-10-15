@@ -13,9 +13,9 @@ add wave -noupdate -expand -group crcif -color {Dark Orchid} /crc32_tb/crcif/crc
 add wave -noupdate -color Coral -radix unsigned /crc32_tb/PROG/timeout
 add wave -noupdate -expand -group {crc32 internal} -radix unsigned /crc32_tb/DUT/count
 add wave -noupdate -expand -group {crc32 internal} -radix unsigned /crc32_tb/DUT/n_count
-add wave -noupdate -expand -group {crc32 internal} /crc32_tb/DUT/n_crc
+add wave -noupdate -expand -group {crc32 internal} /crc32_tb/DUT/n_crc_data_out
 add wave -noupdate -expand -group {crc32 internal} /crc32_tb/DUT/curr_data
-add wave -noupdate -expand -group {crc32 internal} /crc32_tb/DUT/n_data
+add wave -noupdate -expand -group {crc32 internal} /crc32_tb/DUT/n_curr_data
 add wave -noupdate -expand -group {crc32 internal} /crc32_tb/DUT/crc_enable
 add wave -noupdate -expand -group {crc32 internal} /crc32_tb/DUT/curr_orient
 TreeUpdate [SetDefaultTree]
@@ -35,4 +35,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {0 ns} {956 ns}
+WaveRestoreZoom {762 ns} {1718 ns}

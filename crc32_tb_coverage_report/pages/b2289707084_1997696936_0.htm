@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+  <title>Questa Coverage Report</title>
+  <!-- original name: _crc32_tb_DUTContentFrame2.htm -->
+  <link rel="StyleSheet" media="print"  href="../css/ucdb2htmlP.css"/>
+  <link rel="StyleSheet" media="screen" href="../css/ucdb2html.css"/>
+  <link rel="StyleSheet" media="screen" href="../css/ucdb2html_newlook.css"/>
+  <script type="text/javascript" src="../scripts/jquery.js"></script>
+  <script type="text/javascript" src="../scripts/showhide.js"></script>
+  
+</head>
+<body id="ucdb2html_detail" onload="showLast()">
+  <h1><span class="strip">Questa</span> Branch Coverage Report</h1>
+  <h3>Scope: /<a href="z2667742028_0624057086_0.htm">crc32_tb</a>/<a href="z2289707084_1997696936_0.htm">DUT</a></h3>
+  <!-- use script block so buttons vanish when JavaScript is disabled -->
+  <script type="text/javascript">
+  <!--
+  document.write(
+    '<table class="buttons" cellspacing="2" cellpadding="2"><tr>' +
+       '<td id="showAll" width="100" onclick="showAll()" class="button_on" ' +
+           'title="Display all coverage scopes and bins.">Show All</td>' +
+       '<td id="showCov" width="100" onclick="showCov()" class="button_off" ' +
+           'title="Display only covered scopes and bins.">Show Covered</td>' +
+       '<td id="showMis" width="100" onclick="showMis()" class="button_off" ' +
+           'title="Display only uncovered scopes and bins.">Show Missing</td>' +
+    '</tr></table>');
+  //-->
+  </script>
+  <div class="covered"><a name="cvg201"/><hr/><table>
+  <tr l="24" lnk="__HDL_srcfile_5.htm#24" z="   assign crc.crc_ready = (count == '0) ? 1'b1 : 1'b0;" c="G" p="100.00"/><tr/>
+  <tr cr="c" t="I" l="24" lnk="__HDL_srcfile_5.htm#24" z="   assign crc.crc_ready = (count == '0) ? 1'b1 : 1'b0;" h="5" c="g"/>
+  <tr cr="c" t="E" l="24" lnk="__HDL_srcfile_5.htm#24" z="   assign crc.crc_ready = (count == '0) ? 1'b1 : 1'b0;" h="97" c="g"/>
+  </table>
+  </div><div class="covered"><a name="cvg202"/><hr/><table>
+  <tr l="29" lnk="__HDL_srcfile_5.htm#29" z="	if(!nRST)" c="G" p="100.00"/><tr/>
+  <tr cr="c" t="I" l="29" lnk="__HDL_srcfile_5.htm#29" z="	if(!nRST)" h="11" c="g"/>
+  <tr cr="c" t="E" l="33" lnk="__HDL_srcfile_5.htm#33" z="	else" h="117" c="g"/>
+  </table>
+  </div><div class="covered"><a name="cvg203"/><hr/><table>
+  <tr l="43" lnk="__HDL_srcfile_5.htm#43" z="	if(count != 6'd0 &amp;&amp; count != 6'd32)" c="G" p="100.00"/><tr/>
+  <tr cr="c" t="I" l="43" lnk="__HDL_srcfile_5.htm#43" z="	if(count != 6'd0 &amp;&amp; count != 6'd32)" h="100" c="g"/>
+  <tr cr="c" t="T" l="47" lnk="__HDL_srcfile_5.htm#47" z="	else if(crc.crc_start &amp;&amp; count == 6'd0)" h="4" c="g"/>
+  <tr cr="c" t="T" l="51" lnk="__HDL_srcfile_5.htm#51" z="	else if(count == 6'd32)" h="3" c="g"/>
+  <tr cr="c" t="A" l="43" lnk="__HDL_srcfile_5.htm#43" z="	if(count != 6'd0 &amp;&amp; count != 6'd32)" h="7" c="g"/>
+  </table>
+  </div><div class="covered"><a name="cvg204"/><hr/><table>
+  <tr l="61" lnk="__HDL_srcfile_5.htm#61" z="	if(!nRST)" c="G" p="100.00"/><tr/>
+  <tr cr="c" t="I" l="61" lnk="__HDL_srcfile_5.htm#61" z="	if(!nRST)" h="11" c="g"/>
+  <tr cr="c" t="E" l="66" lnk="__HDL_srcfile_5.htm#66" z="	else" h="117" c="g"/>
+  </table>
+  </div><div class="covered"><a name="cvg205"/><hr/><table>
+  <tr l="70" lnk="__HDL_srcfile_5.htm#70" z="             curr_orient &lt;= (count == '0) ? crc.crc_orient : cu..." c="G" p="100.00"/><tr/>
+  <tr cr="c" t="I" l="70" lnk="__HDL_srcfile_5.htm#70" z="             curr_orient &lt;= (count == '0) ? crc.crc_orient : cu..." h="21" c="g"/>
+  <tr cr="c" t="E" l="70" lnk="__HDL_srcfile_5.htm#70" z="             curr_orient &lt;= (count == '0) ? crc.crc_orient : cu..." h="96" c="g"/>
+  </table>
+  </div><div class="covered"><a name="cvg206"/><hr/><table>
+  <tr l="72" lnk="__HDL_srcfile_5.htm#72" z="             if (crc_enable) begin" c="G" p="100.00"/><tr/>
+  <tr cr="c" t="I" l="72" lnk="__HDL_srcfile_5.htm#72" z="             if (crc_enable) begin" h="100" c="g"/>
+  <tr cr="c" t="T" l="76" lnk="__HDL_srcfile_5.htm#76" z="             else if (crc.crc_reset &amp;&amp; crc.crc_ready) begin" h="3" c="g"/>
+  <tr cr="c" t="A" l="72" lnk="__HDL_srcfile_5.htm#72" z="             if (crc_enable) begin" h="14" c="g"/>
+  </table>
+  </div><div class="covered"><a name="cvg207"/><hr/><table>
+  <tr l="91" lnk="__HDL_srcfile_5.htm#91" z="	if (count == '0) begin" c="G" p="100.00"/><tr/>
+  <tr cr="c" t="I" l="91" lnk="__HDL_srcfile_5.htm#91" z="	if (count == '0) begin" h="17" c="g"/>
+  <tr cr="c" t="A" l="91" lnk="__HDL_srcfile_5.htm#91" z="	if (count == '0) begin" h="101" c="g"/>
+  </table>
+  </div><script type="text/javascript" src="../scripts/buildbranchpage.js"></script>
+  <!-- make sure jumps to last few line nos work -->
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+  
+</body>
+</html>
