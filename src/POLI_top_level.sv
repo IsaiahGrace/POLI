@@ -58,7 +58,7 @@ module POLI_top_level
    // Submodule declerations
    apb_slave apb_slave (CLK, nRST, apbif);
    control_register control_register (CLK, nRST, crif);
-   crc_generator crc_generator (CLK, nRST, crcif);
+   crc32 crc32 (CLK, nRST, crcif);
 
    // Individual NAND/NOR gate
    sim_wrapper_NAND_NOR NAND_NOR (.A (crif.NAND_NOR_a),
