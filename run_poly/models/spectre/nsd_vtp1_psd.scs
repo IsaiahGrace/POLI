@@ -1,0 +1,28 @@
+** Scaled to measurement of 1nA at 200mV forward bias
+model nsd_vtp1_psd diode
++level = 1
++is = 1.2e-02
++   isw = 2.3e-14
++     n = 1.0
++    ns = 1.0
++   cjo = 1.05e-3
++    vj = 0.5061
++     m = 0.3341
++  cjsw = 10e-11
++  vjsw = 1
++  mjsw = 0.1249
++  minr = 1m
++  tlev = 2
++ tlevc = 1
++    eg = 1.11
++  gap1 = 4.73e-04
++  gap2 = 636
++  fc = 0
++  tnom = 25
++   cta = 0.00136
++   ctp = 0.00295
++   pta = 0.00199
++   ptp = 0.0008
++  imax = 1e15
+
+

@@ -1,0 +1,6 @@
+
+include "nsoi1_thick35_metal_subvt.scs"
+include "nsoi2_thick35_metal_io.scs"
+
+include "psoi1_thick35_metal_subvt.scs"
+include "psoi2_thick35_metal_io.scs"

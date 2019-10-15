@@ -1,0 +1,10 @@
+
+subckt nsoi2_tg (S G D B X)
+parameters \
+	l=0  \
+	w=0  \
+	nf=1  \
+
+nsoi2_tg (S G D B X) ps_nsoi2 l=l w=nf*w nf=nf
+
+ends nsoi2_tg
