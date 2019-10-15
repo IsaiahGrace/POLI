@@ -9,13 +9,13 @@ module sim_wrapper_NAND_NOR (
 			     output logic X
 			     );
    
-   sim_NAND_NOR A1 (
-		    .A(A),
-		    .B(B),
-		    .Vxx(orient),
-		    .Vyy(~orient),
-		    .X(X)
-		    );
+   sim_NAND_NOR NAND_NOR (
+			  .A(A),
+			  .B(B),
+			  .Vxx(orient),
+			  .Vyy(~orient),
+			  .X(X)
+			  );
 
 endmodule // sim_wrapper_NAND_NOR
 
