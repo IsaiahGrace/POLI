@@ -1,60 +1,172 @@
+/*
+ John Martinuk
+ jmartinu@purdue.edu
+ 
+ Isaiah Grace
+ igrace@purdue.edu
+ */
+
 `include "crc_generator_if.vh"
-
-import cpu_types_pkg::*;
-
 
 `timescale 1 ns / 1 ns
 
 module crc32_tb;
-   parameter PERIOD = 10;
+   parameter PERIOD = 20;
    logic CLK = 0, nRST;
 
    //clock
    always #(PERIOD/2) CLK++;
-   //cache if
+   
+   // CRC interface
    crc_generator_if crcif();
 
-   //
-   crc_test PROG(CLK, nRST, crc_if);
+   // main test program
+   crc_test PROG(CLK, nRST, crcif);
 
-   //data cache
-   crc32 DUT(CLK, nRST, crc_if.crc);
+   // DUT
+   crc32 DUT(CLK, nRST, crcif);
 
-
-
-endmodule // memory_control_tb
-
-program crc_test(
-					input logic CLK,
-					output logic nRST,
-					crc_if crc
-	);
-	parameter PERIOD = 10;
-	word_t caseNum;
-	initial
-	 	begin
-
-	 		caseNum = 0;
-      crc.crc_data_in = '0;
-      crc.crc_reset = 1'b0;
-      crc.crc_start = 1'b0;
-      crc.crc_orient = '0;
-
-	 		nRST = 1'b0;
-	 		@(posedge CLK);
-	 		nRST = 1'b1;
-	 		@(posedge CLK);
-
-			assert (crc.crc_data_out == '0 && crc.crc_ready == 1'b1) $display("Test: %d at %t: Correct Reset Values",  caseNum, $time);
- 			else $display("Test: %d at  %t: Incorrect Reset Values", caseNum, $time);
+endmodule // crc32_tb
 
 
-      caseNum = 1
+program crc_test (
+		  input logic  CLK,
+		  output logic nRST,
+		  crc_generator_if crcif
+		  );
+   
+   // Test signals
+   int 			       test_case;
+   string 		       test_name;
+   int 			       timeout; // We will not wait for ready forever
+   
+   task reset_DUT;
+      begin
+	 nRST = 1'b1;
+	 #(2)
+	 nRST = 1'b0;
+	 crcif.crc_data_in = '0;
+	 crcif.crc_reset = '0;
+	 crcif.crc_start = '0;
+	 crcif.crc_orient = '0;
+	 @(negedge CLK);
+	 @(negedge CLK);
+	 nRST = 1'b1;
+	 //@(posedge CLK);
+      end
+   endtask // reset_DUT
 
+   initial
+     begin
+	// RESET DUT
+	test_case = 0;
+	test_name = "nRST";
+	reset_DUT();
 
+	// Reset should load data_in into data_out
+	@(posedge CLK);
+	test_case++;
+	test_name = "Reset";
+	crcif.crc_data_in = 32'hFF;
+	@(negedge CLK);
+	crcif.crc_reset = 1'b1;
+	@(negedge CLK);
+	crcif.crc_reset = 1'b0;
+	@(posedge CLK);
+	assert (crcif.crc_data_out == 32'hFF)
+	  else $error("data_in was not loaded into data_out on crc reset");
+	
 
-			$finish;
-		end
-
-endprogram
-
+	// Start should lower ready bit
+	@(posedge CLK);
+	test_case++;
+	test_name = "Start";
+	crcif.crc_start = 1'b1;
+	@(posedge CLK);
+	#(2)
+	assert (crcif.crc_ready == 1'b0)
+	  else $error("Ready flag was not lowered after start");
+	reset_DUT();
+	
+	// Two start pulses should not adversly effect operations
+	@(posedge CLK);
+	test_case++;
+	test_name = "Double start";
+	crcif.crc_data_in = 32'hAA;
+	@(posedge CLK);
+	crcif.crc_start = 1'b1;
+	@(posedge CLK);
+	crcif.crc_start = 1'b0;
+	@(posedge CLK);
+	crcif.crc_start = 1'b1;
+	@(posedge CLK);
+	crcif.crc_start = 1'b0;
+	// Wait for ready flag
+	timeout = 0;
+	while (crcif.crc_ready != 1'b1)
+	  begin
+	     @(posedge CLK);
+	     timeout++;
+	     assert (timeout < 40)
+	       else $fatal("Timout exeeded 40 cycles while waiting for ready flag");
+	  end
+	@(posedge CLK);
+	assert (crcif.crc_data_out == 32'hAA)
+	  else $error("Double start corrupted crc state");
+	reset_DUT();
+		
+       // Setting a new polynomial during opperation does not currupt operation in progress
+	@(posedge CLK);
+	test_case++;
+	test_name = "Polynomial change after start";
+	crcif.crc_data_in = 32'h00AA0055;
+	crcif.crc_orient = 32'hFFFF44FF;
+	@(posedge CLK);
+	crcif.crc_start = 1'b1;
+	@(posedge CLK);
+	crcif.crc_start = 1'b0;
+	//crcif.crc_orient
+	// Wait for ready flag
+	timeout = 0;
+	while (crcif.crc_ready != 1'b1)
+	  begin
+	     @(posedge CLK);
+	     timeout++;
+	     assert (timeout < 40)
+	       else $fatal("Timout exeeded 40 cycles while waiting for ready flag");
+	  end
+	@(posedge CLK);
+	assert (crcif.crc_data_out == 32'h00AA0055)
+	  else $error("Polynomial write corrupted crc state");
+	
+	//reset_DUT();
+	
+	/*
+	 TRY WRITING NEW POLYNOMIAL IN THE MIDDLE OF CRC GEN
+	 WRITE(CRC_INPUT, 0xFF)
+	 WRITE(CRC_CONFIG, 0xAA)
+	 WRITE(CRC_CONTROL, 0x1)
+	 WRITE(CRC_CONFIG, 0x55)
+	 *wait*
+	 READ(CRC_STATUS, expect=0x1)
+	 READ(CRC_OUTPUT, expect=) // expect 0xff with 0xAA as CRC orient
+	 
+	 TRY CHANGING INPUT_DATA MID PROCESS
+	 WRITE(CRC_INPUT, 0xFF)
+	 WRITE(CRC_CONTROL, 0x1)
+	 WRITE(CRC_INPUT, 0xAA)
+	 *wait*
+	 READ(CRC_STATUS, expect=0x1)
+	 READ(CRC_OUTPUT, expect=0xFF)
+	 
+	 CHANGE POLYNOMIAL 3 TIMES AND SHOW A CRC THAT COMES OUT AS ZERO
+	 */
+	
+	// TOGGLE COVERAGE
+	@(posedge CLK);
+	@(posedge CLK);
+	@(posedge CLK);
+	
+     end // initial begin
+   
+endprogram // crc_test
