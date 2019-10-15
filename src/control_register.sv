@@ -17,6 +17,23 @@ module control_register (
    // Import types
    import POLI_types_pkg::*;
 
+   logic 			     next_crc_start;
+   logic 			     next_crc_reset;
+
+   // Logic to pulse the start and reset flags, the crc32 module expects them to be high for only one clock cycle 
+   always_comb
+     begin
+	if (crif.crc_start)
+	  next_crc_start = 1'b0;
+	else
+	  next_crc_start = crif.write_enable && crif.register_select == CRC_CONTROL ? crif.write_data[0] : crif.crc_start;
+
+	if (crif.crc_reset)
+	  next_crc_reset = 1'b0;
+	else
+	  next_crc_reset = crif.write_enable && crif.register_select == CRC_CONTROL ? crif.write_data[1] : crif.crc_reset;
+     end // always_comb
+   
    // combinational logic for read_data
    always_comb
      begin
@@ -56,8 +73,8 @@ module control_register (
 	else
 	  begin
 	     crif.crc_data_in     <= crif.write_enable && crif.register_select == CRC_INPUT        ? crif.write_data    : crif.crc_data_in;
-	     crif.crc_start       <= crif.write_enable && crif.register_select == CRC_CONTROL      ? crif.write_data[0] : crif.crc_start;
-	     crif.crc_reset       <= crif.write_enable && crif.register_select == CRC_CONTROL      ? crif.write_data[1] : crif.crc_reset;
+	     crif.crc_start       <= next_crc_start;
+	     crif.crc_reset       <= next_crc_reset;
 	     crif.crc_orient      <= crif.write_enable && crif.register_select == CRC_CONFIG       ? crif.write_data    : crif.crc_orient;
 	     crif.NAND_NOR_a      <= crif.write_enable && crif.register_select == NAND_NOR_INPUT   ? crif.write_data[0] : crif.NAND_NOR_a;
 	     crif.NAND_NOR_b      <= crif.write_enable && crif.register_select == NAND_NOR_INPUT   ? crif.write_data[1] : crif.NAND_NOR_b;

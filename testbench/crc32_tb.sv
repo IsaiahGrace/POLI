@@ -183,8 +183,7 @@ program crc_test (
 	assert (crcif.crc_data_out == 32'h940D4516)
 	  else $error("Data write corrupted crc state");
 	reset_DUT();
-	
-	// TOGGLE COVERAGE
+
      end // initial begin
    
 endprogram // crc_test

@@ -181,7 +181,69 @@ program test
 	   else $error("PRDATA != %h during: %s", exp_data, test_name);
       end
    endtask // apb_read
+
+   task crc_wait_for_ready;
+      begin
+	 // Task signals
+	 logic [WORD_SIZE-1:0] crc_ready;
+	 int 		       timeout;
+	 
+	 // Expected signals from apb_slave
+	 logic 		       exp_PREADY;
+	 logic 		       select;
+	 logic 		       waiting;
+	 
+	 
+	 // Initial conditions
+	 @(posedge CLK);
+	 waiting = 1'b1;
+	 timeout = 0;
+	 crc_ready = '0;
+	 select = 1'b1;
+	 PWRITE = 1'b0;
+	 PSEL = 1'b1;
+	 PADDR = CRC_STATUS_ADDR;
+	 
+	 while (crc_ready == 32'b0)
+	   begin
+	      //@(posedge CLK);
+	      // Timeout logic so we can't get stuck here
+	      timeout++;
+	      assert (timeout < 40)
+		else $fatal("Timout exeeded 40 cycles while waiting for ready flag");
+	      #(0.5)
+	      // Setup phase of transfer
+	      PENABLE = 1'b0;
+	      transfer_phase = "Setup";
+	      
+	      @(negedge CLK);
+	      // Calculate setup expected outputs
+	      exp_PREADY = 1'b0;
+	      
+	      // Check apb_slave outputs during Setup
+	      assert (PREADY == exp_PREADY)
+		else $error("PREADY != %d during: %s", exp_PREADY, test_name);
+	      
+	      @(posedge CLK);
+	      #(0.5)
+	      // Access phase of transfer
+	      PENABLE = 1'b1;
+	      exp_PREADY = 1'b1;
+	      transfer_phase = "Access";
+	      
+	      @(negedge CLK);
+	      // Check apb_slave outputs during Access
+	      assert (PREADY == exp_PREADY)
+		else $error("PREADY != %d during: %s", exp_PREADY, test_name);
+	      crc_ready = PRDATA;
+	      @(posedge CLK);
+	   end // while (!crc_ready)
+	 PSEL = 1'b0;
+	 waiting = 1'b0;
+      end
+   endtask // crc_wait_for_ready
    
+
 
    logic [3:0] 		       NAND_NOR_table [7:0];
    logic [3:0] 		       XOR_BUF_table [7:0];
@@ -211,7 +273,7 @@ program test
      begin
 	// RESET DUT
 	reset_DUT();
-
+	
 	// Demonstrate NAND_NOR Truth Table
 	test_case++;
 	test_name = "NAND_NOR Truth Table";
@@ -247,7 +309,132 @@ program test
 		      .select(1'b1));
 	  end // for (int i = 0; i < 8; i++)
 
-	 
+	
+	// Demonstration of CRC Generator module
+	
+	// Reset should load data_in into data_out
+	@(posedge CLK);
+	test_case++;
+	test_name = "Reset CRC";
+	reset_DUT();
+	apb_write(.write_data(32'hFF),
+		  .address(CRC_INPUT_ADDR),
+		  .select(1'b1));
+	apb_write(.write_data(32'h2),
+		  .address(CRC_CONTROL_ADDR), 
+		  .select(1'b1));
+	apb_read(.exp_data(32'hff),
+		 .address(CRC_OUTPUT_ADDR),
+		 .select(1'b1));
+	
+	// Start should lower ready bit
+	@(posedge CLK);
+	test_case++;
+	test_name = "Start CRC";
+	reset_DUT();
+	apb_write(.write_data(32'h1),
+		  .address(CRC_CONTROL_ADDR),
+		  .select(1'b1));
+	apb_read(.exp_data(32'h0),
+		 .address(CRC_CONTROL_ADDR),
+		 .select(1'b1));
+	
+	// Two start pulses should not adversly effect operations
+	@(posedge CLK);
+	test_case++;
+	test_name = "Double start";
+	reset_DUT();
+	apb_write(.write_data(32'hAA),
+		  .address(CRC_INPUT_ADDR),
+		  .select(1'b1));
+	apb_write(.write_data(32'h1),
+		  .address(CRC_CONTROL_ADDR),
+		  .select(1'b1));
+	apb_write(.write_data(32'h1),
+		  .address(CRC_CONTROL_ADDR),
+		  .select(1'b1));
+	crc_wait_for_ready();
+	apb_read(.exp_data(32'hAA),
+		 .address(CRC_OUTPUT_ADDR),
+		 .select(1'b1));
+
+	
+	// Setting a new polynomial during opperation does not currupt operation in progress
+	@(posedge CLK);
+	test_case++;
+	test_name = "Config change after start";
+	reset_DUT();
+	apb_write(.write_data(32'h124721AB),
+		  .address(CRC_INPUT_ADDR),
+		  .select(1'b1));
+	apb_write(.write_data(32'h2),
+		  .address(CRC_CONTROL_ADDR),
+		  .select(1'b1));
+	apb_write(.write_data(32'hF0AA0055),
+		  .address(CRC_INPUT_ADDR),
+		  .select(1'b1));
+	apb_write(.write_data(32'h82608EDB),
+		  .address(CRC_CONFIG_ADDR),
+		  .select(1'b1));
+	apb_write(.write_data(32'h1),
+		  .address(CRC_CONTROL_ADDR),
+		  .select(1'b1));
+	@(posedge CLK);
+	PSEL = 1'b0;
+	PENABLE = 1'b0;
+	PWRITE = 1'b0;
+	@(posedge CLK);
+	@(posedge CLK);
+	@(posedge CLK);
+	@(posedge CLK);
+	@(posedge CLK);
+	apb_write(.write_data(32'h00FF00FF),
+		  .address(CRC_CONFIG_ADDR),
+		  .select(1'b1));
+	crc_wait_for_ready();
+	apb_read(.exp_data(32'h940D4516),
+		 .address(CRC_OUTPUT_ADDR),
+		 .select(1'b1));
+		 
+	// Changeing data during opperation does not currupt operation in progress
+	@(posedge CLK);
+	test_case++;
+	test_name = "Data change after start";
+	reset_DUT();
+	apb_write(.write_data(32'h124721AB),
+		  .address(CRC_INPUT_ADDR),
+		  .select(1'b1));
+	apb_write(.write_data(32'h2),
+		  .address(CRC_CONTROL_ADDR),
+		  .select(1'b1));
+	apb_write(.write_data(32'hF0AA0055),
+		  .address(CRC_INPUT_ADDR),
+		  .select(1'b1));
+	apb_write(.write_data(32'h82608EDB),
+		  .address(CRC_CONFIG_ADDR),
+		  .select(1'b1));
+	apb_write(.write_data(32'h1),
+		  .address(CRC_CONTROL_ADDR),
+		  .select(1'b1));
+	@(posedge CLK);
+	PSEL = 1'b0;
+	PENABLE = 1'b0;
+	PWRITE = 1'b0;
+	@(posedge CLK);
+	@(posedge CLK);
+	@(posedge CLK);
+	@(posedge CLK);
+	@(posedge CLK);
+	apb_write(.write_data(32'h00FF00FF),
+		  .address(CRC_INPUT_ADDR),
+		  .select(1'b1));
+	crc_wait_for_ready();
+	apb_read(.exp_data(32'h940D4516),
+		 .address(CRC_OUTPUT_ADDR),
+		 .select(1'b1));
+	
+	// CHANGE POLYNOMIAL 3 TIMES AND SHOW A CRC THAT COMES OUT AS ZERO
+	
      end // initial begin
       
 endprogram // test
