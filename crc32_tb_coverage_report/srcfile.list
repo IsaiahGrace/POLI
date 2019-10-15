@@ -1,0 +1,5 @@
+inc/crc_generator_if.vh
+src/crc32.sv
+src/sim_XOR_BUF.sv
+src/sim_wrapper_XOR_BUF.sv
+testbench/crc32_tb.sv
