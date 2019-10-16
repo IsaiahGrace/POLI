@@ -178,7 +178,7 @@ program test
 	 assert (PREADY == exp_PREADY)
 	   else $error("PREADY != %d during: %s", exp_PREADY, test_name);
 	 assert (PRDATA == exp_data)
-	   else $error("PRDATA != %h during: %s", exp_data, test_name);
+	   else $error("PRDATA (%h) != %h during: %s", PRDATA, exp_data, test_name);
       end
    endtask // apb_read
 
@@ -433,8 +433,132 @@ program test
 		 .address(CRC_OUTPUT_ADDR),
 		 .select(1'b1));
 	
-	// CHANGE POLYNOMIAL 3 TIMES AND SHOW A CRC THAT COMES OUT AS ZERO
+	// Demonstrate checksum generation and validation
+	@(posedge CLK);
+	test_case++;
+	test_name = "Generate checksum";
+	reset_DUT();
+	// Configure initial state
+	apb_write(.write_data(32'd123145),
+		  .address(CRC_INPUT_ADDR),
+		  .select(1'b1));
+	apb_write(.write_data(32'h2),
+		  .address(CRC_CONTROL_ADDR),
+		  .select(1'b1));
+
+	// Configure polynomial
+	apb_write(.write_data(32'd628324),
+		  .address(CRC_CONFIG_ADDR),
+		  .select(1'b1));
+
+	// Write 1st word
+	apb_write(.write_data(32'd151718),
+		  .address(CRC_INPUT_ADDR),
+		  .select(1'b1));
+	apb_write(.write_data(32'h1),
+		  .address(CRC_CONTROL_ADDR),
+		  .select(1'b1));
 	
+	// Confirm output is expected
+	crc_wait_for_ready();
+	apb_read(.exp_data(32'h07505ede),
+		 .address(CRC_OUTPUT_ADDR),
+		 .select(1'b1));
+	
+	// Write 2nd word
+	apb_write(.write_data(32'd123156),
+		  .address(CRC_INPUT_ADDR),
+		  .select(1'b1));
+	apb_write(.write_data(32'h1),
+		  .address(CRC_CONTROL_ADDR),
+		  .select(1'b1));
+
+	// Confirm output is expected
+	crc_wait_for_ready();
+	apb_read(.exp_data(32'h255878e0),
+		 .address(CRC_OUTPUT_ADDR),
+		 .select(1'b1));
+	
+	// Write all zeros to generate checksum
+	apb_write(.write_data(32'd0),
+		  .address(CRC_INPUT_ADDR),
+		  .select(1'b1));
+	apb_write(.write_data(32'h1),
+		  .address(CRC_CONTROL_ADDR),
+		  .select(1'b1));
+
+	// Confirm checksum is expected
+	crc_wait_for_ready();
+	apb_read(.exp_data(32'h8e1f5a6c),
+		 .address(CRC_OUTPUT_ADDR),
+		 .select(1'b1));
+
+	// Now send same data stream into crc32 and use checksum to validate signal
+	@(posedge CLK);
+	PSEL = 1'b0;
+	PENABLE = 1'b0;
+	PWRITE = 1'b0;
+	test_case++;
+	test_name = "Validate checksum";
+	// Configure initial state
+	apb_write(.write_data(32'd123145),
+		  .address(CRC_INPUT_ADDR),
+		  .select(1'b1));
+	apb_write(.write_data(32'h2),
+		  .address(CRC_CONTROL_ADDR),
+		  .select(1'b1));
+
+	// Write 1st word
+	apb_write(.write_data(32'd151718),
+		  .address(CRC_INPUT_ADDR),
+		  .select(1'b1));
+	apb_write(.write_data(32'h1),
+		  .address(CRC_CONTROL_ADDR),
+		  .select(1'b1));
+	
+	// Confirm output is expected
+	crc_wait_for_ready();
+	apb_read(.exp_data(32'h07505ede),
+		 .address(CRC_OUTPUT_ADDR),
+		 .select(1'b1));
+	
+	// Write 2nd word
+	apb_write(.write_data(32'd123156),
+		  .address(CRC_INPUT_ADDR),
+		  .select(1'b1));
+	apb_write(.write_data(32'h1),
+		  .address(CRC_CONTROL_ADDR),
+		  .select(1'b1));
+
+	// Confirm output is expected
+	crc_wait_for_ready();
+	apb_read(.exp_data(32'h255878e0),
+		 .address(CRC_OUTPUT_ADDR),
+		 .select(1'b1));
+	
+	// Write checksum to flush crc
+	apb_write(.write_data(32'h8e1f5a6c),
+		  .address(CRC_INPUT_ADDR),
+		  .select(1'b1));
+	apb_write(.write_data(32'h1),
+		  .address(CRC_CONTROL_ADDR),
+		  .select(1'b1));
+
+	// Confirm checksum is expected
+	crc_wait_for_ready();
+	apb_read(.exp_data(32'd0),
+		 .address(CRC_OUTPUT_ADDR),
+		 .select(1'b1));
+
+	
+	@(posedge CLK);
+	PSEL = 1'b0;
+	PENABLE = 1'b0;
+	PWRITE = 1'b0;
+	@(posedge CLK);
+	@(posedge CLK);
+	@(posedge CLK);
+	@(posedge CLK);
      end // initial begin
       
 endprogram // test
