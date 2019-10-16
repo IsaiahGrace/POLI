@@ -1,4 +1,5 @@
 import math
+import sys
 def crcGen(currCRC, newData, orientation):
     crc = list()
     data = list()
@@ -41,3 +42,13 @@ def crcGen(currCRC, newData, orientation):
         else:
             decCRC = decCRC + 0
     return decCRC
+
+if __name__ == "__main__":
+    if (len(sys.argv) == 1):
+        while(True):
+            currCRC = int(input("currCRC:"))
+            newData = int(input("newData:"))
+            orientation = int(input("orientation:"))
+            print(crcGen(currCRC,newData,orientation))
+    else:
+        print(crcGen(int(sys.argv[1]),int(sys.argv[2]),int(sys.argv[3])))
