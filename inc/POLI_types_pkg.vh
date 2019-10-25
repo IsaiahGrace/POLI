@@ -14,7 +14,7 @@ package POLI_types_pkg;
    parameter WORD_SIZE = 32;
    
    // Address space
-   parameter BASE_ADDR = 32'h00ff0000; // TODO: Get an assigned base address for our peripheral from the chip integration team
+   parameter BASE_ADDR = 32'h80030000; // This is the base address of our peripheral as given to us in the AFTx05 Memory Map
 
    // NAND_NOR register addresses
    localparam NAND_NOR_CONTROL_ADDR = BASE_ADDR + 8'h00;
