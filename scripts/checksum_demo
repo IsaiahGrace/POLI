@@ -1,0 +1,12 @@
+currCRC, newData, orientation
+
+# Checksum generation
+$ python3 crc32Gen.py 123145 151718 628324 = 61560730
+$ python3 crc32Gen.py 61560730 123156 628324 = 1989119936
+$ python3 crc32Gen.py 1989119936 0 628324 = 2409059600
+
+# Checksum validation
+$ python3 crc32Gen.py 123145 151718 628324 = 61560730
+$ python3 crc32Gen.py 61560730 123156 628324 = 1989119936
+$ python3 crc32Gen.py 1989119936 2409059600 628324 = 0
+
