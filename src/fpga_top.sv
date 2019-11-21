@@ -20,7 +20,8 @@ typedef enum logic [3:0] {
 			  CRC_INPUT,
 			  CRC_CONTROL,
 			  CRC_STATUS,
-			  CRC_OUTPUT
+			  CRC_OUTPUT,
+			  WAIT
 			  } state_t;
 
 	     
@@ -172,7 +173,7 @@ module fpga_top
 	    begin
 	       PSEL = 1'b1;
 	       PADDR = CRC_OUTPUT_ADDR;
-	       LED = PRDATA[7:0];
+	       nxt_LED = PRDATA[7:0];
 	    end
 	endcase // case (state)
      end // always_comb
