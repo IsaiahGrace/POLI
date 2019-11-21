@@ -34,7 +34,7 @@ module fpga_top
    );
 
    localparam Polynomial = 32'hDEADBEEF;
-   localparam threshold = 32'h10000000;
+   localparam Threshold = 32'h00000010;
    
    
    state_t state;
@@ -81,7 +81,7 @@ module fpga_top
 	  CRC_CONTROL: nxt_state = PREADY ? CRC_STATUS  : CRC_CONTROL;
 	  CRC_STATUS:  nxt_state = PREADY & PRDATA[0]   ? CRC_OUTPUT : CRC_STATUS;
 	  CRC_OUTPUT:  nxt_state = PREADY ? WAIT        : CRC_OUTPUT;
-	  WAIT: nxt_state = count == threshold ? START : WAIT;
+	  WAIT: nxt_state = count == Threshold ? START : WAIT;
 	endcase // case (state)
      end // always_comb
 
