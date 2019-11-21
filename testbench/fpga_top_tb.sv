@@ -58,14 +58,16 @@ program test
 	 @(negedge CLK);
 	 @(negedge CLK);
 	 nRST = 1'b1;
-	 @(posedge CLK);
       end
    endtask // reset_DUT
 
    task wait_cycles;
-      input cycles;
-      for (int i = 0; i < cycles; i++)
-	@(posedge CLK);
+      input int cycles;
+      begin
+	 int i;
+	 for (i = 0; i < cycles; i++)
+	   @(posedge CLK);
+      end
    endtask // wait_cycles
    
    // Main test sequence
@@ -78,24 +80,25 @@ program test
 
 	// GATE mode
 	test_case++;
-	test_name = "GATE mode"
-
-	SW[3] = 1'b1;
+	test_name = "GATE mode";
+	
+	SW = 4'b1000;
 
 	for (int i = 0; i < 8; i++)
 	  begin
 	     @(posedge CLK);
 	     SW[2:0] = SW[2:0] + 1;
-	     wait_cycles(20);
+	     wait_cycles(.cycles(50));
 	  end
 
 	// CRC mode
+	@(posedge CLK);
 	test_case++;
-	test_name = "CRC mode"
-
+	test_name = "CRC mode";
+	
 	SW = 4'b0;
 
-	wait_cycles(1000);
+	wait_cycles(.cycles(10000));
 
      end // initial begin
 endprogram // test

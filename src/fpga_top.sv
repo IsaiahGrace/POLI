@@ -34,7 +34,7 @@ module fpga_top
    );
 
    localparam Polynomial = 32'hDEADBEEF;
-   localparam Threshold = 32'h00000010;
+   localparam Threshold = 32'd50; // 50Mhz clock frequency means set threshold to 50,000,000 for one new CRC/s
    
    
    state_t state;
@@ -77,7 +77,7 @@ module fpga_top
 	  XB_OUTPUT:  nxt_state = PREADY ? START      : XB_OUTPUT;
 	  
 	  CRC_CONFIG:  nxt_state = PREADY ? CRC_INPUT   : CRC_CONFIG;
-	  CRC_INPUT:   nxt_state = PREADY ? CRC_CONTROL : CRC_CONFIG;
+	  CRC_INPUT:   nxt_state = PREADY ? CRC_CONTROL : CRC_INPUT;
 	  CRC_CONTROL: nxt_state = PREADY ? CRC_STATUS  : CRC_CONTROL;
 	  CRC_STATUS:  nxt_state = PREADY & PRDATA[0]   ? CRC_OUTPUT : CRC_STATUS;
 	  CRC_OUTPUT:  nxt_state = PREADY ? WAIT        : CRC_OUTPUT;
@@ -103,7 +103,7 @@ module fpga_top
 	       PWRITE = 1'b1;
 	       PADDR = NAND_NOR_CONTROL_ADDR;
 	       PWDATA = SW[2];
-	       nxt_LED[7] = SW[2];
+	       nxt_LED[7] = PREADY ? SW[2] : LED[7];
 	    end
 	  NN_INPUT:
 	    begin
@@ -111,13 +111,13 @@ module fpga_top
 	       PWRITE = 1'b1;
 	       PADDR = NAND_NOR_INPUT_ADDR;
 	       PWDATA = SW[1:0];
-	       nxt_LED[6:5] = SW[1:0];
+	       nxt_LED[6:5] = PREADY ? SW[1:0] : LED[6:5];
 	    end
 	  NN_OUTPUT:
 	    begin
 	       PSEL = 1'b1;
 	       PADDR = NAND_NOR_OUTPUT_ADDR;
-	       nxt_LED[4] = PRDATA[0];
+	       nxt_LED[4] = PREADY ? PRDATA[0] : LED[4];
 	    end
 	  XB_CONTROL:
 	    begin
@@ -125,7 +125,7 @@ module fpga_top
 	       PWRITE = 1'b1;
 	       PADDR = XOR_BUF_CONTROL_ADDR;
 	       PWDATA = SW[2];
-	       nxt_LED[3] = SW[2];
+	       nxt_LED[3] = PREADY ? SW[2] : LED[3];
 	    end
 	  XB_INPUT:
 	    begin
@@ -133,13 +133,13 @@ module fpga_top
 	       PWRITE = 1'b1;
 	       PADDR = XOR_BUF_INPUT_ADDR;
 	       PWDATA = SW[1:0];
-	       nxt_LED[2:1] = SW[1:0];
+	       nxt_LED[2:1] = PREADY ? SW[1:0] : LED[2:1];
 	    end
 	  XB_OUTPUT:
 	    begin
 	       PSEL = 1'b1;
 	       PADDR = XOR_BUF_OUTPUT_ADDR;
-	       nxt_LED[0] = PRDATA[0];
+	       nxt_LED[0] = PREADY ? PRDATA[0] : LED[0];
 	    end
 	  CRC_CONFIG:
 	    begin
@@ -173,7 +173,7 @@ module fpga_top
 	    begin
 	       PSEL = 1'b1;
 	       PADDR = CRC_OUTPUT_ADDR;
-	       nxt_LED = PRDATA[7:0];
+	       nxt_LED = PREADY ? PRDATA[7:0] : LED[7:0];
 	    end
 	endcase // case (state)
      end // always_comb
